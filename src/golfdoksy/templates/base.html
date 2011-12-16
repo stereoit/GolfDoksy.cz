@@ -1,11 +1,137 @@
-{% load cms_tags sekizai_tags %}
-<html>
-  <head>
-      {% render_block "css" %}
-  </head>
-  <body>
-      {% placeholder base_content %}
-      {% block base_content%}{% endblock %}
+{% load cms_tags sekizai_tags %}{% load cms_tags %}{% load cache menu_tags %}{% load menu_tags %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="{{ request.LANGUAGE_CODE }}" xml:lang="{{ request.LANGUAGE_CODE }}">
+<head>
+    <title>{% page_attribute page_title %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-language" content="{{ request.LANGUAGE_CODE }}" />
+    <meta name="description" content="{% page_attribute meta_description %}" />
+    <meta name="keywords" content="{% page_attribute meta_keywords %}" />
+    <meta name="copyright" content="CodeScale s.r.o." />
+    <meta name="author" content="CodeScale s.r.o." />
+    <meta name="google-site-verification" content="lyBJpncDwcKsn7Yvn9AbB-UzZKKKclDlTp3_JVHxDwQ" />
+    {% block robots %}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, snippet, archive" />
+    {% endblock %}
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/reset.css" media="projection, screen" />
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/codescale.css" media="projection, screen" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}{% url rss_latest_news %}" />
+    {% block apple_touch_icons %}
+        <link rel="apple-touch-icon-precomposed" href="{{ MEDIA_URL }}img/touch-icon-iphone4.png" />
+        <!--
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ MEDIA_URL }}img/touch-icon-iphone4.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ MEDIA_URL }}img/touch-icon-ipad.png" />
+        <link rel="apple-touch-icon-precomposed" href="{{ MEDIA_URL }}img/touch-icon-iphone.png" />
+        -->
+    {% endblock %}
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" href="{{ MEDIA_URL }}css/codescale-ie6.css" media="projection, screen" />
+    <![endif]-->
+    {% render_block "css" %}
+{% comment %} 
+    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.6.1.js"></script>
+       {% plugins_media %}{% endcomment %}
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="header-left">
+                <p>
+                    <a href="{% page_id_url 'home' %}" title="Home">CodeScale</a>
+                </p>
+            </div><!-- div#header-left -->
+            <div id="header-right">
+                <div id="language">
+                    <!--
+                    {% language_chooser 'partials/language_chooser.html' %}
+                    -->
+                </div><!-- div#language -->
+                <div id="navigation">
+                    <ul>
+                        {% block menu %}
+                            {% show_menu 0 100 0 100 'partials/menu.html' %}
+                        {% endblock %}
+                    </ul>
+                </div><!-- div#navigation -->
+            </div><!-- div#header-right -->
+            <div class="cleaner"></div>
+        </div><!-- div#header -->
+            <div id="banner" style="{% placeholder draft %}">
+                <div id="banner-left">
+                    <p class="banner-title">
+                        {% placeholder header %}
+                    </p>
+                    <p class="banner-description">
+                        {% placeholder subtitle %}
+                    </p>
+                </div><!-- div#banner-left -->
+                {% placeholder header_right %}
+            </div><!-- div#banner -->
+        <div id="content">
+        {% block content %}
+            {% spaceless %}
+                {% placeholder content %}
+            {% endspaceless %}
+        {% endblock %}
+        </div><!-- div#content -->
+        <div id="footer">
+            <div class="column-1">
+                <h4>{% placeholder navigation_label %}</h4>
+                <ul>
+                    {% show_menu 0 100 0 100 'partials/navigation.html' %}
+                </ul>
+            </div><!-- div.column-1 -->
+            <div class="column-2">
+                <h4>{% placeholder company_address_label %}</h4>
+                <p>
+                    CodeScale s.r.o.<br />
+                    Ventúrska 16<br />
+                    811 01 Bratislava<br />
+                    Slovakia<br /><br />
+                </p>
+            </div><!-- div.column-2 -->
+            <div class="column-3">
+                <h4>{% placeholder how_to_contact_us_label %}</h4>
+                <p>
+                +420 773 885 311<br />
+                +421 948 023 011<br />
+                <a href="mailto:info@codescale.net">info@codescale.net</a><br />
+                <a href="{% page_url 'contact' %}">{% placeholder contact_form_label %}</a><br />
+                <a href="http://www.codescale.net/">www.codescale.net</a>
+                </p>
+            </div><!-- div.column-3 -->
+            <div class="column-4">
+                <h4>Social network</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div><!-- div.column-4 -->
+            <div class="column-5">
+                <p class="column-5-top"></p>
+                <p class="djangocms">
+                    Powered&nbsp;by&nbsp;djangoCMS
+                </p>
+                <p class="copyright">
+                    Copyright &copy; {% now "Y" %} CodeScale s.r.o. All rights reserved.
+                </p>
+            </div><!-- div.column-5 -->
+        </div><!-- div#footer -->
+    </div><!-- div#wrapper -->
+    {% if not IS_DEBUG %}
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-22957842-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    {% endif %}
       {% render_block "js" %}
-  </body>
+</body>
 </html>
