@@ -1,4 +1,4 @@
-src/patroncen/db.sql
+src/golfdoksy/db.sql
 *.pyc
 doc/build
 logs/
