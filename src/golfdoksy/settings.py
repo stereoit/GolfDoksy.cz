@@ -40,10 +40,12 @@ TIME_ZONE = 'Europe/Prague'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'cs_CZ'
+LANGUAGE_CODE = 'cs'
+#LANGUAGE_CODE = 'en'
 
 #django CMS
 LANGUAGES = [
+    ('en', 'English'),
     ('cs', 'Czech'),
 ]
 
