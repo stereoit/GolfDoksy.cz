@@ -1,0 +1,12 @@
+src/patroncen/db.sql
+*.pyc
+doc/build
+logs/
+*.swp
+.DS_Store
+.idea
+*.marks
+# Emacs backup files & locks
+*~
+\#*
+.\#*
