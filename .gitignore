@@ -1,3 +1,4 @@
+src/golfdoksy/final_static/
 src/golfdoksy/db.sql
 *.pyc
 doc/build
