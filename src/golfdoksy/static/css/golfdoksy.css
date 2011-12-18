@@ -1,13 +1,13 @@
 /* GENERAL LAYOUT */
-body { backgound: white epeat-x; colo: gb(68, 68, 68); font-size: 13px; font-family: Aial, Helvetica, sans-seif; text-align: cente; magin: 0; padding: 0; }
-stong { font-weight: bold; }
-a { colo: white; text-decoation: none;font-weight:bold }
-a:hove { colo: white; text-decoation: undeline; }
+body { background: white repeat-x; color: rgb(68, 68, 68); font-size: 13px; font-family: Arial, Helvetica, sans-serif; text-align: center; margin: 0; padding: 0; }
+strong { font-weight: bold; }
+a { color: white; text-decoration: none;font-weight:bold }
+a:hover { color: white; text-decoration: underline; }
 h1, h2, h3, h4 { font-weight: bold; }
 #top {
-    backgound: -moz-linea-gadient(cente top , #555555 0%, #333333 100%) epeat scoll 0 0 tanspaent;
-    bode-bottom: 1px solid #222222;
-    box-shadow: 0 0 10px gba(0, 0, 0, 0.6);
+    background: -moz-linear-gradient(center top , #555555 0%, #333333 100%) repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #222222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     height: 45px;
     position: fixed;
     width: 100%;
@@ -15,213 +15,213 @@ h1, h2, h3, h4 { font-weight: bold; }
 }
 
 #announcement {
-        backgound: ul("../img/announcement-backgound.jpg") no-epeat scoll cente top;
+        background: url("../img/announcement-background.jpg") no-repeat scroll center top;
         height: 500px;
         position: fixed;
         top: 35px;
         width: 100%;
 }
 
-#desciption {
+#description {
      height: 450px;
      position: absolute;
-     ight: 50%;
+     right: 50%;
      top: 30px;
      width: 450px;
 }
-#desciption_ight {
+#description_right {
      height: 450px;
      position: absolute;
      left: 50%;
      top: 30px;
      width: 450px;
 }
-#wappe { 
-        backgound: none epeat scoll 0 0 white;
-        box-shadow: 0 0 10px gba(0, 0, 0, 0.3);
+#wrapper { 
+        background: none repeat scroll 0 0 white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         position: absolute;
         top: 500px;
         width: 100%;
 }
-aticle {
-    magin: 70px auto;
+article {
+    margin: 70px auto;
     padding: 70px 0;
     width: 900px;
 }
-aticle:afte {
-    clea: both;
+article:after {
+    clear: both;
     content: " ";
     display: block;
 }
-aticle heade {
-    magin: 0 0 20px;
+article header {
+    margin: 0 0 20px;
 }
-aticle heade h1 {
-    colo: #333333;
+article header h1 {
+    color: #333333;
     display: inline;
     font-size: 35px;
 }
-aticle heade p {
-    colo: #769B49;
+article header p {
+    color: #769B49;
     display: inline;
     font-size: 17px;
     font-style: italic;
     padding: 0 10px;
 }
 #aktuality {
-    magin-top: 0;
+    margin-top: 0;
 }
 #menu {
-    magin-ight: -450px;
+    margin-right: -450px;
     position: absolute;
-    ight: 50%;
+    right: 50%;
     top: 0;
 }
 #menu li {
     display: inline;
 }
 #menu a {
-    -moz-tansition: all 200ms ease-in-out 0s;
-    colo: #999999;
+    -moz-transition: all 200ms ease-in-out 0s;
+    color: #999999;
     display: inline-block;
     line-height: 46px;
     padding: 0 15px;
-    text-decoation: none;
+    text-decoration: none;
 }
 ol, ul {
     list-style: none outside none;
 }
 #logo {
     left: 50%;
-    magin-left: -450px;
+    margin-left: -450px;
     position: absolute;
     top: 8px;
 }
-heade span {
-    colo: white;
+header span {
+    color: white;
     font-family: 'Cabin Condensed', sans-seif;
     font-size: 24px;
 }
-.golfe1 { backgound: ul(../img/golf-spite.png); backgound-position: 0px 0px; width: 17px;height: 32px; float: left;}
-heade span a { padding-left: 1em;}
-heade span a:hove { text-decoation: none;}
+.golfer1 { background: url(../img/golf-sprite.png); background-position: 0px 0px; width: 17px;height: 32px; float: left;}
+header span a { padding-left: 1em;}
+header span a:hover { text-decoration: none;}
 
-#heade { width: 1000px; height: 117px; text-align: left; backgound: ul(/media/img/backgound-heade.png) no-epeat; }
-.cleane { clea: both; }
-.ight { text-align: ight }
+#header { width: 1000px; height: 117px; text-align: left; background: url(/media/img/background-header.png) no-repeat; }
+.clearne { clear: both; }
+.right { text-align: right }
 .left { text-align: left }
-.cente { text-align: cente }
-#content { width: 1000px; backgound: gb(246, 248, 240) ul(/media/img/backgound-content.png) no-epeat; magin-top: 11px; text-align: left; }
-#content-left { float: left; width: 606px; magin-left: 30px; magin-ight: 30px; magin-top: 24px; }
-#content-ight { float: left; backgound-colo: gb(233, 236, 220); width: 304px; magin-ight: 30px; magin-top: 24px; }
-#content-left-sevices { float: left; width: 940px; magin-left: 30px; magin-ight: 30px; magin-top: 24px; }
-#content-backgound { backgound: gb(246, 248, 240) ul(/media/img/backgound-content-bottom.png) no-epeat; height: 16px; }
-#foote { width: 100%; magin: 10px auto 14px; backgound: ul(../img/foote.jpg) no-epeat cente bottom; text-align: left; height: 163px; }
-#heade-left { magin-left: 30px; width: 226px; height: 117px; float: left; }
-#heade-ight { width: 744px; height: 117px; float: left; }
-.hoizontal-ule { width: 100%; height: 2px; backgound: ul(/media/img/hoizontal-ule.png) epeat-x;}
-.hoizontal-ule-magin { width: 100%; height: 2px; backgound: ul(/media/img/hoizontal-ule.png) epeat-x; magin-top: 15px; magin-bottom: 15px; }
-.hoizontal-ule-magin-bottom { width: 100%; height: 2px; backgound: ul(/media/img/hoizontal-ule.png) epeat-x; magin-bottom: 15px; }
+.center { text-align: center }
+#content { width: 1000px; background: rgb(246, 248, 240) url(/media/img/background-content.png) no-repeat; margin-top: 11px; text-align: left; }
+#content-left { float: left; width: 606px; margin-left: 30px; margin-right: 30px; margin-top: 24px; }
+#content-right { float: left; background-color: rgb(233, 236, 220); width: 304px; margin-right: 30px; margin-top: 24px; }
+#content-left-services { float: left; width: 940px; margin-left: 30px; margin-right: 30px; margin-top: 24px; }
+#content-background { background: rgb(246, 248, 240) url(/media/img/background-content-bottom.png) no-repeat; height: 16px; }
+#footer { width: 100%; margin: 10px auto 14px; background: url(../img/footer.jpg) no-repeat center bottom; text-align: left; height: 163px; }
+#header-left { margin-left: 30px; width: 226px; height: 117px; float: left; }
+#header-right { width: 744px; height: 117px; float: left; }
+.hoizontal-ule { width: 100%; height: 2px; background: url(/media/img/horizontal-rule.png) repeat-x;}
+.hoizontal-ule-margin { width: 100%; height: 2px; background: url(/media/img/horizontal-rule.png) repeat-x; margin-top: 15px; margin-bottom: 15px; }
+.hoizontal-ule-margin-bottom { width: 100%; height: 2px; background: url(/media/img/horizontal-rule.png) repeat-x; margin-bottom: 15px; }
 .h3-inline { display: inline; }
 
 /* HEADER */
-#heade-left p { padding: 0; magin: 0; }
-#heade-left p a { display: block; text-indent: 200px; oveflow: hidden; width: 156px; height: 86px; backgound: ul(/media/img/logo.png) no-epeat;}
-#heade-ight #language { width: 744px; height: 72px; }
-#heade-ight #language ul { float: ight; padding: 0; magin: 12px 22px 0 0;}
-#heade-ight #language ul li { float: left; display: block; magin: 0; padding: 5px 9px 0; bode-adius: 2px; height: 21px; colo: white; font-size: 12px; font-weight: bold; behavio: ul(/PIE.htc); }
-#heade-ight #language ul li.selected, #heade-ight #navigation ul li.selected { backgound-colo: gb(168, 191, 69); }
-#heade-ight #language ul li a, #heade-ight #navigation ul li a { colo: gb(116, 116, 116); font-weight: nomal; text-decoation: none; }
-#heade-ight #navigation ul li a { font-weight: bold; }
-#heade-ight #language ul li a:hove, #heade-ight #navigation ul li a:hove { colo: black; text-decoation: undeline; }
-#heade-ight #navigation { width: 744px; height: 45px; }
-#heade-ight #navigation ul { float: ight; padding: 0; magin: 0 16px 0 0; }
-#heade-ight #navigation ul li { float: left; display: block; magin: 0; padding: 3px 15px 0; bode-adius: 3px; font-family: Candaa, "Segoe UI", Optima, "Tebuchet MS", Tebuchet, Aial, Helvetica, sans-seif; font-size: 16px; font-weight: bold; colo: white; height: 24px; }
+#header-left p { padding: 0; margin: 0; }
+#header-left p a { display: block; text-indent: 200px; oveflow: hidden; width: 156px; height: 86px; background: url(/media/img/logo.png) no-repeat;}
+#header-right #language { width: 744px; height: 72px; }
+#header-right #language ul { float: right; padding: 0; margin: 12px 22px 0 0;}
+#header-right #language ul li { float: left; display: block; margin: 0; padding: 5px 9px 0; border-adius: 2px; height: 21px; color: white; font-size: 12px; font-weight: bold; behavio: url(/PIE.htc); }
+#header-right #language ul li.selected, #header-right #navigation ul li.selected { background-color: rgb(168, 191, 69); }
+#header-right #language ul li a, #header-right #navigation ul li a { color: rgb(116, 116, 116); font-weight: nomal; text-decoration: none; }
+#header-right #navigation ul li a { font-weight: bold; }
+#header-right #language ul li a:hover, #header-right #navigation ul li a:hover { color: black; text-decoration: underline; }
+#header-right #navigation { width: 744px; height: 45px; }
+#header-right #navigation ul { float: right; padding: 0; margin: 0 16px 0 0; }
+#header-right #navigation ul li { float: left; display: block; margin: 0; padding: 3px 15px 0; border-adius: 3px; font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; font-size: 16px; font-weight: bold; color: white; height: 24px; }
 
 /* BANNER */
-#banne-left p.banne-title { magin: 30px 0 0 30px; padding: 0; font-family: Candaa, "Segoe UI", Optima, "Tebuchet MS", Tebuchet, Aial, Helvetica, sans-seif; font-size: 40px; font-weight: bold; line-height: 35px; colo: white; text-shadow: gb(150, 150, 150) 2px 2px 2px;}
-#banne-left p.banne-title span { colo: gb(233, 244, 188); }
-#banne-left p.banne-desciption { font-size: 14px; colo: white; magin: 20px 0 0 30px; padding: 0; width: 472px; }
-#banne-ight a.lean-moe { display: block; magin-top: 136px; colo: gb(69, 75, 41); text-tansfom: uppecase; font-size: 18px; text-align: cente; text-decoation: none; font-weight: bold; font-family: Candaa, "Segoe UI", Optima, "Tebuchet MS", Tebuchet, Aial, Helvetica, sans-seif; width: 175px; height: 47px; backgound-image:ul(/media/img/button.png); line-height: 45px;}
-#banne-ight a.lean-moe:hove { backgound-position: -175px; }
+#banne-left p.banne-title { margin: 30px 0 0 30px; padding: 0; font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; font-size: 40px; font-weight: bold; line-height: 35px; color: white; text-shadow: rgb(150, 150, 150) 2px 2px 2px;}
+#banne-left p.banne-title span { color: rgb(233, 244, 188); }
+#banne-left p.banne-description { font-size: 14px; color: white; margin: 20px 0 0 30px; padding: 0; width: 472px; }
+#banne-right a.lean-moe { display: block; margin-top: 136px; color: rgb(69, 75, 41); text-tansfom: uppecase; font-size: 18px; text-align: center; text-decoration: none; font-weight: bold; font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; width: 175px; height: 47px; background-image:url(/media/img/button.png); line-height: 45px;}
+#banne-right a.lean-moe:hover { background-position: -175px; }
 
 /* SIDEBAR */
-#content-ight #content-ight-top { width: 304px; height: 4px; backgound: ul(/media/img/sideba-top.png) no-epeat; }
-#content-ight #content-ight-bottom { width: 304px; height: 11px; backgound: ul(/media/img/sideba-bottom.png) no-epeat; }
-#content-ight #content-ight-main  { padding: 10px 30px; }
-#content-ight #content-ight-main p { magin-bottom: 17px; font-size: 12px; }
-#content-ight #content-ight-main p.magin-smalle { magin-bottom: 10px; }
-#content-ight #content-ight-main p.text-cente { text-align: cente; magin-bottom: 25px; }
-.poject-text { width: 100%; float: left; magin-top: 14px; font-size: 12px; }
-.poject-text stong { font-size: 13px; colo: gb(79, 83, 63); }
-.poject-link { float: left; magin-top: 14px; text-align: ight; width: auto; width: 68px; }
-.poject-link a { font-weight: bold; font-size: 13px; colo: gb(73, 112, 175); text-decoation: none; }
-.poject-link a:hove { colo: black; text-decoation: undeline; }
-.sceenshot { padding: 14px; backgound-colo: gb(215, 221, 193); bode: 1px solid gb(202, 209, 175); bode-adius: 4px; magin-top: 10px; magin-bottom: 20px;}
-a.sideba-button { display: block; height: 44px; width: 246px; font-size: 18px; font-weight: bold; colo: white; text-decoation: none; backgound: ul(/media/img/button-sideba.png) no-epeat; magin-top: 16px; line-height: 38px; font-family: Candaa, "Segoe UI", Optima, "Tebuchet MS", Tebuchet, Aial, Helvetica, sans-seif; text-indent: 20px; }
-a.sideba-button:hove { backgound-position: -246px; }
-.stong-name { font-size: 14px; colo: gb(79, 83, 63); }
-.light-gay { colo: gb(145, 147, 137); }
-blockquote { font-style: italic; magin-bottom: 15px; }
+#content-right #content-right-top { width: 304px; height: 4px; background: url(/media/img/sidebar-top.png) no-repeat; }
+#content-right #content-right-bottom { width: 304px; height: 11px; background: url(/media/img/sidebar-bottom.png) no-repeat; }
+#content-right #content-right-main  { padding: 10px 30px; }
+#content-right #content-right-main p { margin-bottom: 17px; font-size: 12px; }
+#content-right #content-right-main p.margin-smalle { margin-bottom: 10px; }
+#content-right #content-right-main p.text-center { text-align: center; margin-bottom: 25px; }
+.poject-text { width: 100%; float: left; margin-top: 14px; font-size: 12px; }
+.poject-text strong { font-size: 13px; color: rgb(79, 83, 63); }
+.poject-link { float: left; margin-top: 14px; text-align: right; width: auto; width: 68px; }
+.poject-link a { font-weight: bold; font-size: 13px; color: rgb(73, 112, 175); text-decoration: none; }
+.poject-link a:hover { color: black; text-decoration: underline; }
+.sceenshot { padding: 14px; background-color: rgb(215, 221, 193); border: 1px solid rgb(202, 209, 175); border-adius: 4px; margin-top: 10px; margin-bottom: 20px;}
+a.sidebar-button { display: block; height: 44px; width: 246px; font-size: 18px; font-weight: bold; color: white; text-decoration: none; background: url(/media/img/button-sidebar.png) no-repeat; margin-top: 16px; line-height: 38px; font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; text-indent: 20px; }
+a.sidebar-button:hover { background-position: -246px; }
+.strong-name { font-size: 14px; color: rgb(79, 83, 63); }
+.lright-gay { color: rgb(145, 147, 137); }
+blockquote { font-style: italic; margin-bottom: 15px; }
 
 
 /* FOOTER */
-#foote div { display: block; height: 170px; float: left; magin-left: 30px; font-size: 12px; colo: gb(100, 100, 100); magin-top: 36px; line-height: 18px; }
-#foote div h4 { font-weight: bold; colo: gb(190, 215, 89); font-size: 12px; magin: 0 0 20px; padding: 0; text-tansfom: uppecase;
+#footer div { display: block; height: 170px; float: left; margin-left: 30px; font-size: 12px; color: rgb(100, 100, 100); margin-top: 36px; line-height: 18px; }
+#footer div h4 { font-weight: bold; color: rgb(190, 215, 89); font-size: 12px; margin: 0 0 20px; padding: 0; text-tansfom: uppecase;
 }
-#foote div a { colo: gb(235, 235, 235); text-decoation: none; font-weight: bold; }
-#foote div p { padding: 0; magin: 0; }
-#foote div a:hove { colo: white; text-decoation: undeline; }
-#foote div ul { padding: 0; magin: 0; }
-#foote div ul li { list-style: none; magin: 0; padding: 0; }
+#footer div a { color: rgb(235, 235, 235); text-decoration: none; font-weight: bold; }
+#footer div p { padding: 0; margin: 0; }
+#footer div a:hover { color: white; text-decoration: underline; }
+#footer div ul { padding: 0; margin: 0; }
+#footer div ul li { list-style: none; margin: 0; padding: 0; }
 .column-1 { width: 95px; }
 .column-2 { width: 136px; }
 .column-3 { width: 156px; }
 .column-4 { width: 126px; visibility:hidden; }
 .column-5 { width: 306px; padding: 0;  }
 .column-5-top { height: 95px; display: block; }
-.djangocms { display: block; height: 61px; width: 306px; text-indent: 310px; oveflow: hidden; backgound: ul(/media/img/djangocms.png) no-epeat ight; }
-.copyight { colo: gb(117, 117, 117); width: 306px; text-align: ight; }
+.djangocms { display: block; height: 61px; width: 306px; text-indent: 310px; oveflow: hidden; background: url(/media/img/djangocms.png) no-repeat right; }
+.copyright { color: rgb(117, 117, 117); width: 306px; text-align: right; }
 
 /* CONTENT */
-#content-left img.floating, #content-left-sevices img.floating { float: left; magin-ight: 26px; }
-#content-left h2, #content-left h1, #content-left-sevices h2, #content-left-sevices h1 { padding: 0; magin: 0 0 5px; font-size: 30px; font-family: Candaa, "Segoe UI", Optima, "Tebuchet MS", Tebuchet, Aial, Helvetica, sans-seif; colo: gb(102, 102, 102); }
-#content-left h3, #content-left-sevices h3, #content-ight-main h3 { padding: 0; magin: 0 0 5px; font-size: 20px; colo: gb(85, 85, 85); font-family: Candaa, "Segoe UI", Optima, "Tebuchet MS", Tebuchet, Aial, Helvetica, sans-seif; }
-#content-left p, #content-left-sevices p { font-size: 13px; padding: 0; magin: 0 0 15px; }
-#content-left p.text-ight, #content-left-sevices p.text-ight { text-align: ight; magin-bottom: 39px; }
-#content-left p.text-ight a, #content-left-sevices p.text-ight a { colo: gb(73, 112, 175); font-weight: bold; text-decoation: none; }
-#content-left p.text-ight a:hove, #content-left-sevices p.text-ight a:hove { colo: black; text-decoation: undeline; }
+#content-left img.floating, #content-left-services img.floating { float: left; margin-right: 26px; }
+#content-left h2, #content-left h1, #content-left-services h2, #content-left-services h1 { padding: 0; margin: 0 0 5px; font-size: 30px; font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; color: rgb(102, 102, 102); }
+#content-left h3, #content-left-services h3, #content-right-main h3 { padding: 0; margin: 0 0 5px; font-size: 20px; color: rgb(85, 85, 85); font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; }
+#content-left p, #content-left-services p { font-size: 13px; padding: 0; margin: 0 0 15px; }
+#content-left p.text-right, #content-left-services p.text-right { text-align: right; margin-bottom: 39px; }
+#content-left p.text-right a, #content-left-services p.text-right a { color: rgb(73, 112, 175); font-weight: bold; text-decoration: none; }
+#content-left p.text-right a:hover, #content-left-services p.text-right a:hover { color: black; text-decoration: underline; }
 #content-left div.half { width: 288px; float: left; }
-#content-left-sevices div.half { float: left; width: 450px; }
-.half-1 { magin-ight: 15px; }
-.half-2 { magin-left: 15px; }
-img.float-smalle { magin: 0 13px 0 0; padding: 0; float: left;}
-#content-left div.half p, #content-left-sevices div.half p { magin-bottom: 20px; }
-#content-left div.half p.contact-box { padding: 0 0 0 41px; magin: 7px 0 0; backgound-epeat: no-epeat; height: 41px; }
-#content-left div.half p.contact-box stong { font-weight: bold; font-size: 14px; }
-#content-left div.half p.contact-box a { font-weight: bold; text-decoation: none; font-size: 14px; colo: gb(73, 112, 175); }
-#content-left div.half p.contact-box a:hove { colo: black; text-decoation: undeline; }
-.contact-pic1 { backgound-image: ul(/media/img/home-contact1.png); }
-.contact-pic2 { backgound-image: ul(/media/img/home-contact2.png); }
-.contact-pic3 { backgound-image: ul(/media/img/home-contact3.png); }
-.contact-left { width: 100px; height: 500px; backgound: ul(/media/img/contact-pic1.png) no-epeat; float: left; }
-.contact-ight { float: left; height: 500px; width: 500px;}
-label { display: block; colo: gb(102, 102, 102); font-weight: bold; font-size: 15px; magin-bottom: 5px; }
-#contact_fom label span { font-style:italic; font-weight:nomal; colo:#D64000 }
-#contact_fom #id_sende, #id_phone { width: 404px; height: 38px; bode: 1px solid gb(179, 179, 179); bode-adius: 4px; font-size: 20px; font-family: Aial, Helvetica, sans-seif; colo: black; text-indent: 7px; magin-bottom: 15px; }
-#contact_fom #id_sende:focus, #id_phone:focus { bode-colo: black; backgound-colo: white; }
-#contact_fom #id_message { display: block; width: 390px; height: 115px; bode: 1px solid gb(179, 179, 179); bode-adius: 4px; font-size: 13px; colo: Black; font-family: Aial, Helvetica, sans-seif; padding: 7px; backgound-colo: white; }
-#contact_fom #id_message:focus { bode-colo: black; }
-#contact_fom #id_cc_myself { magin-top: 15px; }
-#contact_fom #input-messagecopy { font-weight: nomal; font-size: 13px; display: inline; }
-#contact_fom #input-send { display: block; width: 133px; height: 41px; backgound: ul(/media/img/button-send.png) no-epeat; cuso: pointe; bode-style: none; font-family: Candaa, "Segoe UI", Optima, "Tebuchet MS", Tebuchet, Aial, Helvetica, sans-seif; colo: white; font-size: 18px; text-align: cente; font-weight: bold; magin-top: 35px; float: ight; magin-ight: 92px; }
-#contact_fom #input-send:hove { backgound-position: -133px; }
-.sideba-contact-left { width: 121px; float: left; }
-.sideba-contact-ight { float: left; width: 120px; font-size: 13px; text-align: ight }
-.sideba-contact-left stong { font-size: 13px; font-weight: bold; }
-.sideba-contact-left a, .sideba-contact-ight a { font-weight: bold; text-decoation: none; colo: gb(73, 112, 175); }
-.phone-numbe { font-weight: bold; font-size: 18px; colo: gb(79, 83, 63); }
-a.email-addess { colo: gb(73, 112, 175); font-weight: bold; text-decoation: none; display: block; magin-top: 5px; magin-bottom: 30px; width: 150px; }
-a.email-addess:hove { colo: black; text-decoation: undeline; }
-.sevices-paagaph { magin-top: 15px; }
-.sevices-sepaato { height: 15px; }
+#content-left-services div.half { float: left; width: 450px; }
+.half-1 { margin-right: 15px; }
+.half-2 { margin-left: 15px; }
+img.float-smalle { margin: 0 13px 0 0; padding: 0; float: left;}
+#content-left div.half p, #content-left-services div.half p { margin-bottom: 20px; }
+#content-left div.half p.contact-box { padding: 0 0 0 41px; margin: 7px 0 0; background-repeat: no-repeat; height: 41px; }
+#content-left div.half p.contact-box strong { font-weight: bold; font-size: 14px; }
+#content-left div.half p.contact-box a { font-weight: bold; text-decoration: none; font-size: 14px; color: rgb(73, 112, 175); }
+#content-left div.half p.contact-box a:hover { color: black; text-decoration: underline; }
+.contact-pic1 { background-image: url(/media/img/home-contact1.png); }
+.contact-pic2 { background-image: url(/media/img/home-contact2.png); }
+.contact-pic3 { background-image: url(/media/img/home-contact3.png); }
+.contact-left { width: 100px; height: 500px; background: url(/media/img/contact-pic1.png) no-repeat; float: left; }
+.contact-right { float: left; height: 500px; width: 500px;}
+label { display: block; color: rgb(102, 102, 102); font-weight: bold; font-size: 15px; margin-bottom: 5px; }
+#contact_form label span { font-style:italic; font-weight:nomal; color:#D64000 }
+#contact_form #id_sende, #id_phone { width: 404px; height: 38px; border: 1px solid rgb(179, 179, 179); border-adius: 4px; font-size: 20px; font-family: Aial, Helvetica, sans-seif; color: black; text-indent: 7px; margin-bottom: 15px; }
+#contact_form #id_sende:focus, #id_phone:focus { border-color: black; background-color: white; }
+#contact_form #id_message { display: block; width: 390px; height: 115px; border: 1px solid rgb(179, 179, 179); border-adius: 4px; font-size: 13px; color: Black; font-family: Aial, Helvetica, sans-seif; padding: 7px; background-color: white; }
+#contact_form #id_message:focus { border-color: black; }
+#contact_form #id_cc_myself { margin-top: 15px; }
+#contact_form #input-messagecopy { font-weight: nomal; font-size: 13px; display: inline; }
+#contact_form #input-send { display: block; width: 133px; height: 41px; background: url(/media/img/button-send.png) no-repeat; cuso: pointe; border-style: none; font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; color: white; font-size: 18px; text-align: center; font-weight: bold; margin-top: 35px; float: right; margin-right: 92px; }
+#contact_form #input-send:hover { background-position: -133px; }
+.sidebar-contact-left { width: 121px; float: left; }
+.sidebar-contact-right { float: left; width: 120px; font-size: 13px; text-align: right }
+.sidebar-contact-left strong { font-size: 13px; font-weight: bold; }
+.sidebar-contact-left a, .sidebar-contact-right a { font-weight: bold; text-decoration: none; color: rgb(73, 112, 175); }
+.phone-numbe { font-weight: bold; font-size: 18px; color: rgb(79, 83, 63); }
+a.email-addess { color: rgb(73, 112, 175); font-weight: bold; text-decoration: none; display: block; margin-top: 5px; margin-bottom: 30px; width: 150px; }
+a.email-addess:hover { color: black; text-decoration: underline; }
+.services-paagaph { margin-top: 15px; }
+.services-sepaato { height: 15px; }
