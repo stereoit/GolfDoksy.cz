@@ -13,17 +13,10 @@
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow, snippet, archive" />
     {% endblock %}
+    <link href='http://fonts.googleapis.com/css?family=Cabin+Condensed|Spinnaker' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" media="projection, screen" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/golfdoksy.css" media="projection, screen" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    {% block apple_touch_icons %}
-        <link rel="apple-touch-icon-precomposed" href="{{ MEDIA_URL }}img/touch-icon-iphone4.png" />
-        <!--
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ MEDIA_URL }}img/touch-icon-iphone4.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ MEDIA_URL }}img/touch-icon-ipad.png" />
-        <link rel="apple-touch-icon-precomposed" href="{{ MEDIA_URL }}img/touch-icon-iphone.png" />
-        -->
-    {% endblock %}
     <!--[if lte IE 6]>
         <link rel="stylesheet" href="{{ MEDIA_URL }}css/codescale-ie6.css" media="projection, screen" />
     <![endif]-->
@@ -34,49 +27,42 @@
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="header">
-            <div id="header-left">
-                <p>
-                    <a href="/" title="Home">GolfDoksy.cz</a>
-                </p>
-            </div><!-- div#header-left -->
-            <div id="header-right">
-                <div id="language">
-                {% comment %}
-                    <!--
-                    {% language_chooser 'partials/language_chooser.html' %}
-                    -->
-                {% endcomment %}
-                </div><!-- div#language -->
-                <div id="navigation">
-                    <ul>
-                        {% block menu %}
-                            {% show_menu 0 100 0 100 'fragments/menu.html' %}
-                        {% endblock %}
-                    </ul>
-                </div><!-- div#navigation -->
-            </div><!-- div#header-right -->
-            <div class="cleaner"></div>
-        </div><!-- div#header -->
-            <div id="banner" style="{% placeholder draft %}">
-                <div id="banner-left">
-                    <p class="banner-title">
-                        {% placeholder header %}
-                    </p>
-                    <p class="banner-description">
-                        {% placeholder subtitle %}
-                    </p>
-                </div><!-- div#banner-left -->
-                {% placeholder header_right %}
-            </div><!-- div#banner -->
-        <div id="content">
-        {% block content %}
-            {% spaceless %}
-                {% placeholder content %}
-            {% endspaceless %}
-        {% endblock %}
-        </div><!-- div#content -->
+    <div id="home"></div>
+    <header id="top">
+        <span><a href="#home" id="logo" class="golfer1">GolfDoksy.cz</a></span>
+        <ul id="menu">
+          <li><a href="#aktuality">Aktuality</a></li>
+          <li><a href="#pricelist">Ceník</a></li>
+          <li><a href="#hriste">Hřiště</a></li>
+          <li><a href="#klub">O Klubu</a></li>
+        </ul>
+        <span id="marker"></span>
+    </header>
+    <div id="announcement">
+      <div id="description">{% placeholder intro %}Přijďte si odpálit!</div>
+      <div id="description_right">{% placeholder intro_right %}Přijďte si odpálit1!</div>
+    </div>
+    <section id="wrapper">
+      <article id="aktuality">
+        <header>
+        <h1>Aktuality</h1>
+        <p>Novinky a zprávy ze sociálních sítí</p>
+        </header>
+      </article>
+    {% comment %}
+      <article id="hriste">
+        <header>
+        <h1>Hřiště</h1>
+        <p>Popis a možnosti našich hřišť</p>
+        </header>
+      </article>
+      <article id="klub">
+        <header>
+        <h1>Klub</h1>
+        <p>Vše podstatné o našem klubu a členství</p>
+        </header>
+      </article>
+    {% endcomment %}
         <div id="footer">
             <div class="column-1">
                 <h4>{% placeholder company_address_label %}</h4>
@@ -112,7 +98,51 @@
                 </p>
             </div><!-- div.column-5 -->
         </div><!-- div#footer -->
-    </div><!-- div#wrapper -->
+    </section>
+    <!--
+    <div id="header">
+        <div id="header-left">
+            <p>
+                <a href="/" title="Home">GolfDoksy.cz</a>
+            </p>
+        </div><!-- div#header-left -->
+        <div id="header-right">
+            <div id="language">
+            {% comment %}
+                <!--
+                {% language_chooser 'partials/language_chooser.html' %}
+                -->
+            {% endcomment %}
+            </div><!-- div#language -->
+            <div id="navigation">
+                <ul>
+                    {% block menu %}
+                        {% show_menu 0 100 0 100 'fragments/menu.html' %}
+                    {% endblock %}
+                </ul>
+            </div><!-- div#navigation -->
+        </div><!-- div#header-right -->
+        <div class="cleaner"></div>
+    </div><!-- div#header -->
+        <div id="banner" style="{% placeholder draft %}">
+            <div id="banner-left">
+                <p class="banner-title">
+                    {% placeholder header %}
+                </p>
+                <p class="banner-description">
+                    {% placeholder subtitle %}
+                </p>
+            </div><!-- div#banner-left -->
+            {% placeholder header_right %}
+        </div><!-- div#banner -->
+    <div id="content">
+    {% block content %}
+        {% spaceless %}
+            {% placeholder content %}
+        {% endspaceless %}
+    {% endblock %}
+    </div><!-- div#content -->
+    -->
     {% if not IS_DEBUG %}
     <script type="text/javascript">
       var _gaq = _gaq || [];
