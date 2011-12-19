@@ -179,7 +179,7 @@ blockquote { font-style: italic; margin-bottom: 15px; }
 
 
 /* Sitemap */
-#sitemap div { display: block; height: 170px; float: left; margin-right: 1em; font-size: 12px; color: rgb(100, 100, 100); margin-top: 36px; line-height: 18px; }
+#sitemap .column { display: block; height: 170px; float: left; margin-right: 1em; font-size: 12px; color: rgb(100, 100, 100); margin-top: 36px; line-height: 18px; }
 #sitemap div h4 { font-weight: bold; color: rgb(190, 215, 89); font-size: 12px; margin: 0 0 20px; padding: 0; text-tansfom: uppecase;
 }
 #sitemap div a { color: rgb(120, 120, 120); text-decoration: none; font-weight: bold; }
