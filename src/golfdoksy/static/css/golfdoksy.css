@@ -194,7 +194,7 @@ blockquote { font-style: italic; margin-bottom: 15px; }
 .column-5 { width: 306px; padding: 0;  }
 .column-5-top { height: 95px; display: block; }
 .djangocms { display: block; height: 61px; width: 306px; text-indent: 310px; oveflow: hidden; background: url(/media/img/djangocms.png) no-repeat right; }
-div#copyright { color: rgb(117, 117, 117); text-align: right; position: absolute; right: 100px; bottom: 1em; height: 1.5em;margin: 0; }
+div#copyright { color: rgb(117, 117, 117); text-align: right; position: absolute; right: 0px; top: 150px; height: 1.5em;margin: 0; }
 
 /* CONTENT */
 #content-left img.floating, #content-left-services img.floating { float: left; margin-right: 26px; }
