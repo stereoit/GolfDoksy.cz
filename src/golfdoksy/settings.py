@@ -6,7 +6,11 @@ import logging
 gettext = lambda s: s
 
 
-DEBUG = True
+if 'prod' in os.uname()[1]:
+    DEBUG = False
+else:
+    DEBUG = True
+
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -73,7 +77,10 @@ MEDIA_URL = '/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 #STATIC_ROOT = rel_path('/static/')
-STATIC_ROOT = rel_path('final_static')
+if DEBUG:
+    STATIC_ROOT = rel_path('final_static')
+else:
+    STATIC_ROOT = '/srv/staticfiles/golfdoksy.cz/static/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
