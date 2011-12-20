@@ -1,7 +1,7 @@
 /* GENERAL LAYOUT */
 body { background: white repeat-x; color: rgb(68, 68, 68); font-size: 13px; font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; }
 strong { font-weight: bold; }
-a { color: white; text-decoration: none;font-weight:bold }
+a { color: white; text-decoration: none;font-weight:bold; outline: 0; }
 a:hover { color: white; text-decoration: underline; }
 h1, h2, h3, h4 { font-weight: bold; }
 
