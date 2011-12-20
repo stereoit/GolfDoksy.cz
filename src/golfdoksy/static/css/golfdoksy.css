@@ -238,3 +238,14 @@ a.email-addess { color: rgb(73, 112, 175); font-weight: bold; text-decoration: n
 a.email-addess:hover { color: black; text-decoration: underline; }
 .services-paagaph { margin-top: 15px; }
 .services-sepaato { height: 15px; }
+
+
+#marker {
+    -moz-transition: all 200ms ease-in-out 0s;
+    background: url("../img/marker.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 18px;
+    position: absolute;
+    top: 43px;
+    width: 32px;
+}

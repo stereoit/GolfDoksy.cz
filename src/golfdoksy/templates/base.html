@@ -21,6 +21,7 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.scrollTo-1.4.2-min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.localscroll-1.2.7-min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/golfdoksy.js"></script>
     {% comment %} 
     <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.6.1.js"></script>
        {% plugins_media %}{% endcomment %}
@@ -98,10 +99,5 @@
         </div><!-- div#footer -->
     </section>
       {% render_block "js" %}
-      <script type="text/javascript">
-        $('document').ready(function() {
-            $.localScroll();
-        });
-      </script>
 </body>
 </html>
