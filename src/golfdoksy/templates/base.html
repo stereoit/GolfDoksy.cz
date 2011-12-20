@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/golfdoksy.css" media="projection, screen" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     {% render_block "css" %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.scrollTo-1.4.2-min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.localscroll-1.2.7-min.js"></script>
     {% comment %} 
     <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.6.1.js"></script>
        {% plugins_media %}{% endcomment %}
@@ -29,7 +32,7 @@
         <span><a href="#home" id="logo" class="golfer1">GolfDoksy.cz</a></span>
         <ul id="menu">
           <li><a href="#aktuality">Aktuality</a></li>
-          <li><a href="#pricelist">Ceník</a></li>
+          <li><a href="#cenik">Ceník</a></li>
           <li><a href="#hriste">Hřiště</a></li>
           <li><a href="#klub">O Klubu</a></li>
         </ul>
@@ -40,7 +43,7 @@
       <div id="description_right">{% placeholder intro_right %}Přijďte si odpálit1!</div>
     </div>
     <section id="wrapper">
-      <article id="aktuality">
+      <article id="aktuality"><a href="cenik"></a>
         <header>
         <h1>Aktuality</h1>
         <p>Novinky a zprávy ze sociálních sítí</p>
@@ -95,5 +98,10 @@
         </div><!-- div#footer -->
     </section>
       {% render_block "js" %}
+      <script type="text/javascript">
+        $('document').ready(function() {
+            $('').localScroll();
+        });
+      </script>
 </body>
 </html>
