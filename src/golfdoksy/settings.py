@@ -160,6 +160,7 @@ INSTALLED_APPS = (
     'menus',
     'south',
     'sekizai',
+    #'cms.plugins.file',
     'cms.plugins.flash',
     'cms.plugins.googlemap',
     'cms.plugins.link',
@@ -167,16 +168,18 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     'cms.plugins.twitter',
     'filer',
+    'easy_thumbnails',
     'cmsplugin_filer_file',
     'cmsplugin_filer_folder',
     'cmsplugin_filer_image',
     'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
+    'sorl.thumbnail',
     'django.contrib.admin',
 )
 
 CMS_TEMPLATES = (
-    ('template_1.html', 'Template One'),
+    ('homepage.html', 'Homepage'),
     ('template_2.html', 'Template Two'),
 )
 
