@@ -9,4 +9,5 @@ django-mptt==0.5.2
 django-sekizai==0.5
 easy-thumbnails==1.0-alpha-20
 html5lib==0.90
+sorl-thumbnail==11.12
 wsgiref==0.1.2
