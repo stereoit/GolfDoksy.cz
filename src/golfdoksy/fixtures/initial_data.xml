@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object pk="1" model="auth.user">
+        <field type="CharField" name="username">vasa81</field>
+        <field type="CharField" name="first_name"></field>
+        <field type="CharField" name="last_name"></field>
+        <field type="CharField" name="email">vasa81@gmail.com</field>
+        <field type="CharField" name="password">sha1$ef8a8$9599e72b5dc72e667e2af3d172125306b3f85d3d</field>
+        <field type="BooleanField" name="is_staff">True</field>
+        <field type="BooleanField" name="is_active">True</field>
+        <field type="BooleanField" name="is_superuser">True</field>
+        <field type="DateTimeField" name="last_login">2012-03-07 10:42:36</field>
+        <field type="DateTimeField" name="date_joined">2012-03-07 10:24:23</field>
+        <field to="auth.group" name="groups" rel="ManyToManyRel"></field>
+        <field to="auth.permission" name="user_permissions" rel="ManyToManyRel"></field>
+    </object>
+    <object pk="2" model="auth.user">
+        <field type="CharField" name="username">admin</field>
+        <field type="CharField" name="first_name"></field>
+        <field type="CharField" name="last_name"></field>
+        <field type="CharField" name="email">robert.smol@stereoit.com</field>
+        <field type="CharField" name="password">sha1$6535e$c71289666857435ef65aae448fff9f922d684d4f</field>
+        <field type="BooleanField" name="is_staff">True</field>
+        <field type="BooleanField" name="is_active">True</field>
+        <field type="BooleanField" name="is_superuser">True</field>
+        <field type="DateTimeField" name="last_login">2012-03-08 14:14:11</field>
+        <field type="DateTimeField" name="date_joined">2012-03-08 14:14:11</field>
+        <field to="auth.group" name="groups" rel="ManyToManyRel"></field>
+        <field to="auth.permission" name="user_permissions" rel="ManyToManyRel"></field>
+    </object>
+    <object pk="0acdc02ff725b69fb32edfebe3b6d0b3" model="sessions.session">
+        <field type="TextField" name="session_data">OTFjYjc5Mzc2Y2NjMDM4ZjkzY2ZmMmYyODBlYmM4ZjVhNTNmYTAxMDqAAn1xAShVDmNtc19hZG1p
+bl9zaXRlSwFVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k
+cy5Nb2RlbEJhY2tlbmRVD2RqYW5nb19sYW5ndWFnZVgCAAAAY3NVDV9hdXRoX3VzZXJfaWRLAXUu
+</field>
+        <field type="DateTimeField" name="expire_date">2012-03-22 13:30:35</field>
+    </object>
+    <object pk="1" model="sites.site">
+        <field type="CharField" name="domain">example.com</field>
+        <field type="CharField" name="name">example.com</field>
+    </object>
+    <object pk="1" model="cms.placeholder">
+        <field type="CharField" name="slot">intro_left</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="2" model="cms.placeholder">
+        <field type="CharField" name="slot">intro_right</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="3" model="cms.placeholder">
+        <field type="CharField" name="slot">hriste</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="4" model="cms.placeholder">
+        <field type="CharField" name="slot">turnaje</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="5" model="cms.placeholder">
+        <field type="CharField" name="slot">klub</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="6" model="cms.placeholder">
+        <field type="CharField" name="slot">cenik</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="7" model="cms.placeholder">
+        <field type="CharField" name="slot">galerie</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="8" model="cms.placeholder">
+        <field type="CharField" name="slot">partneri</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="9" model="cms.placeholder">
+        <field type="CharField" name="slot">company_address_label</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="10" model="cms.placeholder">
+        <field type="CharField" name="slot">how_to_contact_us_label</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="11" model="cms.placeholder">
+        <field type="CharField" name="slot">contact_form_label</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="12" model="cms.placeholder">
+        <field type="CharField" name="slot">kontakt</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="13" model="cms.placeholder">
+        <field type="CharField" name="slot">contact_form</field>
+        <field type="PositiveSmallIntegerField" name="default_width"><None></None></field>
+    </object>
+    <object pk="2" model="cms.cmsplugin">
+        <field to="cms.placeholder" name="placeholder" rel="ManyToOneRel">12</field>
+        <field to="cms.cmsplugin" name="parent" rel="ManyToOneRel"><None></None></field>
+        <field type="PositiveSmallIntegerField" name="position">1</field>
+        <field type="CharField" name="language">cs</field>
+        <field type="CharField" name="plugin_type">SnippetPlugin</field>
+        <field type="DateTimeField" name="creation_date">2012-03-08 11:49:24</field>
+        <field type="PositiveIntegerField" name="level">0</field>
+        <field type="PositiveIntegerField" name="lft">1</field>
+        <field type="PositiveIntegerField" name="rght">2</field>
+        <field type="PositiveIntegerField" name="tree_id">2</field>
+    </object>
+    <object pk="3" model="cms.cmsplugin">
+        <field to="cms.placeholder" name="placeholder" rel="ManyToOneRel">13</field>
+        <field to="cms.cmsplugin" name="parent" rel="ManyToOneRel"><None></None></field>
+        <field type="PositiveSmallIntegerField" name="position">0</field>
+        <field type="CharField" name="language">cs</field>
+        <field type="CharField" name="plugin_type">ContactFormPlugin</field>
+        <field type="DateTimeField" name="creation_date">2012-03-08 13:30:49</field>
+        <field type="PositiveIntegerField" name="level">0</field>
+        <field type="PositiveIntegerField" name="lft">1</field>
+        <field type="PositiveIntegerField" name="rght">2</field>
+        <field type="PositiveIntegerField" name="tree_id">3</field>
+    </object>
+    <object pk="1" model="cms.page">
+        <field type="CharField" name="created_by">vasa81</field>
+        <field type="CharField" name="changed_by">vasa81</field>
+        <field to="cms.page" name="parent" rel="ManyToOneRel"><None></None></field>
+        <field type="DateTimeField" name="creation_date">2012-03-07 10:42:57</field>
+        <field type="DateTimeField" name="changed_date">2012-03-08 11:35:19</field>
+        <field type="DateTimeField" name="publication_date">2012-03-07 10:43:15</field>
+        <field type="DateTimeField" name="publication_end_date"><None></None></field>
+        <field type="BooleanField" name="in_navigation">False</field>
+        <field type="BooleanField" name="soft_root">False</field>
+        <field type="CharField" name="reverse_id"><None></None></field>
+        <field type="CharField" name="navigation_extenders"></field>
+        <field type="BooleanField" name="published">True</field>
+        <field type="CharField" name="template">homepage.html</field>
+        <field to="sites.site" name="site" rel="ManyToOneRel">1</field>
+        <field type="SmallIntegerField" name="moderator_state">0</field>
+        <field type="PositiveIntegerField" name="level">0</field>
+        <field type="PositiveIntegerField" name="lft">1</field>
+        <field type="PositiveIntegerField" name="rght">2</field>
+        <field type="PositiveIntegerField" name="tree_id">1</field>
+        <field type="BooleanField" name="login_required">False</field>
+        <field type="SmallIntegerField" name="limit_visibility_in_menu"><None></None></field>
+        <field type="BooleanField" name="publisher_is_draft">True</field>
+        <field to="cms.page" name="publisher_public" rel="OneToOneRel"><None></None></field>
+        <field type="SmallIntegerField" name="publisher_state">1</field>
+        <field to="cms.placeholder" name="placeholders" rel="ManyToManyRel"><object pk="1"></object><object pk="2"></object><object pk="3"></object><object pk="4"></object><object pk="5"></object><object pk="6"></object><object pk="7"></object><object pk="8"></object><object pk="9"></object><object pk="10"></object><object pk="11"></object><object pk="12"></object><object pk="13"></object></field>
+    </object>
+    <object pk="1" model="cms.title">
+        <field type="CharField" name="language">cs</field>
+        <field type="CharField" name="title">homepage</field>
+        <field type="CharField" name="menu_title"></field>
+        <field type="SlugField" name="slug">homepage</field>
+        <field type="CharField" name="path"></field>
+        <field type="BooleanField" name="has_url_overwrite">False</field>
+        <field type="CharField" name="application_urls"></field>
+        <field type="CharField" name="redirect"></field>
+        <field type="TextField" name="meta_description"></field>
+        <field type="CharField" name="meta_keywords"></field>
+        <field type="CharField" name="page_title"></field>
+        <field to="cms.page" name="page" rel="ManyToOneRel">1</field>
+        <field type="DateTimeField" name="creation_date">2012-03-07 10:42:57</field>
+    </object>
+    <object pk="1" model="snippet.snippet">
+        <field type="CharField" name="name">Mapa</field>
+        <field type="TextField" name="html">&lt;img alt="mapa" src="/media/filer_private/2012/03/08/map_golf.png" /&gt;</field>
+        <field type="CharField" name="template"></field>
+    </object>
+    <object pk="2" model="snippet.snippetptr">
+        <field to="snippet.snippet" name="snippet" rel="ManyToOneRel">1</field>
+    </object>
+    <object pk="1" model="filer.folder">
+        <field to="filer.folder" name="parent" rel="ManyToOneRel"><None></None></field>
+        <field type="CharField" name="name">img</field>
+        <field to="auth.user" name="owner" rel="ManyToOneRel">1</field>
+        <field type="DateTimeField" name="uploaded_at">2012-03-08 11:42:31</field>
+        <field type="DateTimeField" name="created_at">2012-03-08 11:42:31</field>
+        <field type="DateTimeField" name="modified_at">2012-03-08 11:42:31</field>
+        <field type="PositiveIntegerField" name="lft">1</field>
+        <field type="PositiveIntegerField" name="rght">2</field>
+        <field type="PositiveIntegerField" name="tree_id">1</field>
+        <field type="PositiveIntegerField" name="level">0</field>
+    </object>
+    <object pk="1" model="filer.file">
+        <field to="filer.folder" name="folder" rel="ManyToOneRel">1</field>
+        <field type="FileField" name="file">filer_private/2012/03/08/map_golf.png</field>
+        <field type="CharField" name="_file_type_plugin_name">Image</field>
+        <field type="IntegerField" name="_file_size">82859</field>
+        <field type="CharField" name="sha1">3f819869d1871c17d5a413e4bb5c4cecd0f41da5</field>
+        <field type="BooleanField" name="has_all_mandatory_data">False</field>
+        <field type="CharField" name="original_filename">map_golf.png</field>
+        <field type="CharField" name="name"></field>
+        <field type="TextField" name="description"></field>
+        <field to="auth.user" name="owner" rel="ManyToOneRel">1</field>
+        <field type="DateTimeField" name="uploaded_at">2012-03-08 11:42:45</field>
+        <field type="DateTimeField" name="modified_at">2012-03-08 11:42:53</field>
+        <field type="BooleanField" name="is_public">False</field>
+    </object>
+    <object pk="1" model="filer.image">
+        <field type="IntegerField" name="_height">547</field>
+        <field type="IntegerField" name="_width">632</field>
+        <field type="DateTimeField" name="date_taken">2012-03-08 11:42:45</field>
+        <field type="CharField" name="default_alt_text"></field>
+        <field type="CharField" name="default_caption"></field>
+        <field type="CharField" name="author"></field>
+        <field type="BooleanField" name="must_always_publish_author_credit">False</field>
+        <field type="BooleanField" name="must_always_publish_copyright">False</field>
+        <field type="CharField" name="subject_location"></field>
+    </object>
+    <object pk="1" model="filer.clipboard">
+        <field to="auth.user" name="user" rel="ManyToOneRel">1</field>
+    </object>
+    <object pk="1" model="easy_thumbnails.source">
+        <field type="CharField" name="storage_hash">f9bde26a1556cd667f742bd34ec7c55e</field>
+        <field type="CharField" name="name">filer_private/2012/03/08/map_golf.png</field>
+        <field type="DateTimeField" name="modified">2012-03-08 11:42:45</field>
+    </object>
+    <object pk="1" model="easy_thumbnails.thumbnail">
+        <field type="CharField" name="storage_hash">d26becbf46ac48eda79c7a39a13a02dd</field>
+        <field type="CharField" name="name">filer_private/2012/03/08/map_golf.png.16x16_q85_crop_upscale.jpg</field>
+        <field type="DateTimeField" name="modified">2012-03-08 11:42:46</field>
+        <field to="easy_thumbnails.source" name="source" rel="ManyToOneRel">1</field>
+    </object>
+    <object pk="2" model="easy_thumbnails.thumbnail">
+        <field type="CharField" name="storage_hash">d26becbf46ac48eda79c7a39a13a02dd</field>
+        <field type="CharField" name="name">filer_private/2012/03/08/map_golf.png.32x32_q85_crop_upscale.jpg</field>
+        <field type="DateTimeField" name="modified">2012-03-08 11:42:46</field>
+        <field to="easy_thumbnails.source" name="source" rel="ManyToOneRel">1</field>
+    </object>
+    <object pk="3" model="easy_thumbnails.thumbnail">
+        <field type="CharField" name="storage_hash">d26becbf46ac48eda79c7a39a13a02dd</field>
+        <field type="CharField" name="name">filer_private/2012/03/08/map_golf.png.48x48_q85_crop_upscale.jpg</field>
+        <field type="DateTimeField" name="modified">2012-03-08 11:42:46</field>
+        <field to="easy_thumbnails.source" name="source" rel="ManyToOneRel">1</field>
+    </object>
+    <object pk="4" model="easy_thumbnails.thumbnail">
+        <field type="CharField" name="storage_hash">d26becbf46ac48eda79c7a39a13a02dd</field>
+        <field type="CharField" name="name">filer_private/2012/03/08/map_golf.png.64x64_q85_crop_upscale.jpg</field>
+        <field type="DateTimeField" name="modified">2012-03-08 11:42:46</field>
+        <field to="easy_thumbnails.source" name="source" rel="ManyToOneRel">1</field>
+    </object>
+    <object pk="5" model="easy_thumbnails.thumbnail">
+        <field type="CharField" name="storage_hash">d26becbf46ac48eda79c7a39a13a02dd</field>
+        <field type="CharField" name="name">filer_private/2012/03/08/map_golf.png.210x10000_q85.jpg</field>
+        <field type="DateTimeField" name="modified">2012-03-08 11:42:54</field>
+        <field to="easy_thumbnails.source" name="source" rel="ManyToOneRel">1</field>
+    </object>
+    <object pk="1" model="contact.contact">
+        <field type="CharField" name="email">vasa81@gmail.com</field>
+        <field type="CharField" name="phone"></field>
+        <field type="TextField" name="message">adasda</field>
+        <field type="BooleanField" name="cc_myself">True</field>
+        <field type="CharField" name="ip">127.0.0.1</field>
+        <field type="DateTimeField" name="inserted">2012-03-08 13:16:27</field>
+    </object>
+    <object pk="2" model="contact.contact">
+        <field type="CharField" name="email">vasa81@gmail.com</field>
+        <field type="CharField" name="phone"></field>
+        <field type="TextField" name="message">adasda</field>
+        <field type="BooleanField" name="cc_myself">True</field>
+        <field type="CharField" name="ip">127.0.0.1</field>
+        <field type="DateTimeField" name="inserted">2012-03-08 13:17:09</field>
+    </object>
+    <object pk="1" model="contact.contactmeta">
+        <field type="CharField" name="language_code">en</field>
+        <field type="CharField" name="sender_label">Your email</field>
+        <field type="CharField" name="phone_label">Your phone number</field>
+        <field type="CharField" name="message_label">Your message</field>
+        <field type="CharField" name="cc_myself_label">Send me a copy of this message</field>
+        <field type="CharField" name="submit_button_label">Send</field>
+        <field type="TextField" name="sender_error_required">is required</field>
+        <field type="TextField" name="sender_error_invalid">is invalid</field>
+        <field type="TextField" name="phone_error_invalid">is invalid</field>
+        <field type="TextField" name="message_error_required">is required</field>
+        <field type="TextField" name="message_error_invalid">is too short</field>
+        <field type="TextField" name="message_success_msg">Your message has been successfully sent.</field>
+        <field type="TextField" name="email_subject">CodeScale - Thank you for your inquiry</field>
+        <field type="TextField" name="email_intro">Hello,
+
+Thank you for contacting us. We will get back to you as soon as possible.</field>
+        <field type="TextField" name="email_signature">CodeScale s.r.o - Software Development Done Right
+email: info@codescale.net
+tel: +420 773 885 311, +421 948 023 011
+web: http://www.codescale.net</field>
+    </object>
+    <object pk="2" model="contact.contactmeta">
+        <field type="CharField" name="language_code">cs</field>
+        <field type="CharField" name="sender_label">E-mail</field>
+        <field type="CharField" name="phone_label">Telefon</field>
+        <field type="CharField" name="message_label">Zpráva</field>
+        <field type="CharField" name="cc_myself_label">Poslat mi kopii</field>
+        <field type="CharField" name="submit_button_label">Odeslat</field>
+        <field type="TextField" name="sender_error_required">povinná položka</field>
+        <field type="TextField" name="sender_error_invalid">špatný formát</field>
+        <field type="TextField" name="phone_error_invalid">špatný formát</field>
+        <field type="TextField" name="message_error_required">povinná položka</field>
+        <field type="TextField" name="message_error_invalid">špatný formát</field>
+        <field type="TextField" name="message_success_msg">Zpráva byla úspěšně odeslána</field>
+        <field type="TextField" name="email_subject">GolfDoksy.cz - kontaktní formulář</field>
+        <field type="TextField" name="email_intro">Obsah kontaktního formuláře</field>
+        <field type="TextField" name="email_signature">GolfDoksy.cz</field>
+    </object>
+</django-objects>
