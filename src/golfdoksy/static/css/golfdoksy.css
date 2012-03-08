@@ -246,8 +246,8 @@ img.float-smalle { margin: 0 13px 0 0; padding: 0; float: left;}
 .contact-right { float: left; height: 500px; width: 500px;}
 label { display: block; color: rgb(102, 102, 102); font-weight: bold; font-size: 15px; margin-bottom: 5px; }
 #contact_form label span { font-style:italic; font-weight:nomal; color:#D64000 }
-#contact_form #id_sende, #id_phone { width: 404px; height: 38px; border: 1px solid rgb(179, 179, 179); border-adius: 4px; font-size: 20px; font-family: Aial, Helvetica, sans-seif; color: black; text-indent: 7px; margin-bottom: 15px; }
-#contact_form #id_sende:focus, #id_phone:focus { border-color: black; background-color: white; }
+#contact_form #id_sender, #id_phone { width: 404px; height: 38px; border: 1px solid rgb(179, 179, 179); border-adius: 4px; font-size: 20px; font-family: Aial, Helvetica, sans-seif; color: black; text-indent: 7px; margin-bottom: 15px; }
+#contact_form #id_sender:focus, #id_phone:focus { border-color: black; background-color: white; }
 #contact_form #id_message { display: block; width: 390px; height: 115px; border: 1px solid rgb(179, 179, 179); border-adius: 4px; font-size: 13px; color: Black; font-family: Aial, Helvetica, sans-seif; padding: 7px; background-color: white; }
 #contact_form #id_message:focus { border-color: black; }
 #contact_form #id_cc_myself { margin-top: 15px; }

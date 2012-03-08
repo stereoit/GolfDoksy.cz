@@ -1,0 +1,27 @@
+{% if form.is_valid %}
+	  <div class="col box" id="col-form">
+        {{ form.message_success_msg|safe }}
+      </div>
+{% else %}
+	  <div class="col box" id="col-form">
+		<form id="contact_form" action="{{ request.path }}" method="post">
+		  {% csrf_token %}
+		  <div class="form-input">
+			<label for="id_sender">{{ form.sender.label }}<span class="required">*</span>{% if form.sender.errors %} <span>{{ form.sender.errors.0|escape }}</span>{% endif %}:</label>
+			{{ form.sender }}
+		  </div>
+		  <div class="form-input" id="form-contact-note">
+			<label for="id_message">{{ form.message.label }}<span class="required">*</span>{% if form.message.errors %} <span>{{ form.message.errors.0|escape }}</span>{% endif %}</label>
+			{{ form.message }}
+		  </div>
+		  <div class="form-input">
+			{{ form.cc_myself }}
+			<label for="id_cc_myself" id="input-messagecopy">{{ form.cc_myself.label }}</label>
+		  </div>
+		  <div class="form-legend" id="form-contact-legend">* {{ form.contact_meta.sender_error_required }}</div>
+		  <div class="form-input" id="form-contact-submit">
+			<input type="submit" name="submit" class="form-submit" value="{{ form.submit_button_value }}" id="input-send">
+		  </div>
+		</form>
+	  </div>
+{% endif %}

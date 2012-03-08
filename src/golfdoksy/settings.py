@@ -13,8 +13,9 @@ else:
 
 TEMPLATE_DEBUG = DEBUG
 
+GENERAL_SUPPORT_EMAIL = 'robert.smol@stereoit.com'
 ADMINS = (
-     ('Robert Smol', 'robert.smol@stereoit.com'),
+     ('Robert Smol', GENERAL_SUPPORT_EMAIL),
 )
 
 PROJECT_ROOT = '%s' % os.path.dirname(os.path.abspath(__file__))
@@ -133,7 +134,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'cms.middleware.multilingual.MultilingualURLMiddleware',
+    #'cms.middleware.multilingual.MultilingualURLMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
@@ -176,6 +177,7 @@ INSTALLED_APPS = (
     'cmsplugin_filer_video',
     'sorl.thumbnail',
     'django.contrib.admin',
+    'contact',
 )
 
 CMS_TEMPLATES = (

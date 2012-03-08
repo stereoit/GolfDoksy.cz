@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+    <object pk="1" model="contact.contactmeta">
+        <field type="CharField" name="language_code">en</field>
+        <field type="CharField" name="sender_label">Your email</field>
+        <field type="CharField" name="phone_label">Your phone number</field>
+        <field type="CharField" name="message_label">Your message</field>
+        <field type="CharField" name="cc_myself_label">Send me a copy of this message</field>
+        <field type="CharField" name="submit_button_label">Send</field>
+        <field type="TextField" name="sender_error_required">is required</field>
+        <field type="TextField" name="sender_error_invalid">is invalid</field>
+        <field type="TextField" name="phone_error_invalid">is invalid</field>
+        <field type="TextField" name="message_error_required">is required</field>
+        <field type="TextField" name="message_error_invalid">is too short</field>
+        <field type="TextField" name="message_success_msg">Your message has been successfully sent.</field>
+        <field type="TextField" name="email_subject">CodeScale - Thank you for your inquiry</field>
+        <field type="TextField" name="email_intro">Hello,
+
+Thank you for contacting us. We will get back to you as soon as possible.</field>
+        <field type="TextField" name="email_signature">CodeScale s.r.o - Software Development Done Right
+email: info@codescale.net
+tel: +420 773 885 311, +421 948 023 011
+web: http://www.codescale.net
+
+</field>
+    </object>
+</django-objects>
