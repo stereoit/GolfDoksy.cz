@@ -179,7 +179,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'contact',
     'news',
-    'photologue'
+    'photologue',
 )
 
 CMS_TEMPLATES = (

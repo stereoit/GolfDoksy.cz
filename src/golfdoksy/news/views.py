@@ -15,6 +15,7 @@ from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime, timedelta, date
 from cms.plugins import snippet
 from datetime import datetime
+from photologue import models
 
 log = logging.getLogger(__name__)
 
@@ -24,18 +25,9 @@ log = logging.getLogger(__name__)
 
 def news(request):
     c = RequestContext(request)
-    c['navigation'] = snippet.models.Snippet.objects.get(name='Navigation').html
-    c['motto'] = snippet.models.Snippet.objects.get(name='Motto').html
-    c['logo'] = snippet.models.Snippet.objects.get(name='Logo').html
-    c['title'] = c['h2'] = u'Novinky'
-    c['items'] = News.objects.filter(published__lte=datetime.now()).order_by('-published')
-    return render_to_response('news-cms.tpl', c)
+    c['news'] = News.objects.filter(published__lte=datetime.now()).order_by('-published')
+    return render_to_response('news.html', c)
 
-def media(request):
-    c = RequestContext(request)
-    c['navigation'] = snippet.models.Snippet.objects.get(name='Navigation').html
-    c['motto'] = snippet.models.Snippet.objects.get(name='Motto').html
-    c['logo'] = snippet.models.Snippet.objects.get(name='Logo').html
-    c['title'] = c['h2'] = u'Média'
-    c['items'] = Medium.objects.filter(published__lte=datetime.now()).order_by('-published')
-    return render_to_response('news-cms.tpl', c)
+def gallery(request):
+    
+    pass
