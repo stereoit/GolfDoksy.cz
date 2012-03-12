@@ -178,6 +178,8 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'django.contrib.admin',
     'contact',
+    'news',
+    'photologue'
 )
 
 CMS_TEMPLATES = (
