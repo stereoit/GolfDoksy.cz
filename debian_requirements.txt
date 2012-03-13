@@ -1,0 +1,5 @@
+apt-get install libpq-dev python-dev libjpeg8 libjpeg8-dev libevent-dev gettext 
+
+sudo ln -sf /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib/
+sudo ln -sf /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/
+sudo ln -sf /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib/
