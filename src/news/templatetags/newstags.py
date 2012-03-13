@@ -39,7 +39,11 @@ def gallery_tag(context, limit = None):
 
 @register.filter
 def hash(h, key):
-    return h[key]
+    try:
+        val = h[key]
+    except IndexError:
+        val = None
+    return val
     
 def get_common_dict(context):
     """

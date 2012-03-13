@@ -84,4 +84,3 @@ class ContactFormPlugin(CMSPluginBase):
         form.contact_meta = contact_meta
 
 plugin_pool.register_plugin(ContactFormPlugin) # register the plugin
-
