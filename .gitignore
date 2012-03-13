@@ -1,5 +1,7 @@
-src/golfdoksy/final_static/
-src/golfdoksy/db.sql
+src/final_static/
+src/db.sql
+src/media/filer*
+src/media/photologue/*
 *.pyc
 doc/build
 logs/
