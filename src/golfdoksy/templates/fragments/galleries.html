@@ -1,0 +1,13 @@
+{% load newstags %}
+{% for i in galleries %}
+<div style="float: left;">
+  <a href="/galerie/{{ i.title_slug }}/">
+  {% with photo=i.photos.all|hash:0 %}
+  <img alt="" src="{{ photo.get_thumbnail_url }}" /><br />
+  {% endwith %}
+  <strong>{{ i.title }}</strong>
+  </a>
+  <span>{{ i.date_added }} celkem {{ i.photos.count }} fotografií</span>
+</div>
+{% endfor %}
+<div style="clear: both;"></div>
