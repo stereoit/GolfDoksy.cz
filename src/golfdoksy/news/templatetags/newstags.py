@@ -25,18 +25,21 @@ def news_tag(context, limit = None):
     result['news'] = qs
     return result
 
-@register.inclusion_tag('fragments/gallery.html', takes_context=True)
+@register.inclusion_tag('fragments/galleries.html', takes_context=True)
 def gallery_tag(context, limit = None):
     result = context
 
-    qs = photologue.models.News.objects.filter(published__lte=datetime.now()).order_by('-published')
+    qs = photologue.models.Gallery.objects.filter(is_public=True, ).order_by('-date_added')
 
     if limit:
         qs = qs[:limit]
-    
-    result['news'] = qs
+
+    result['galleries'] = qs
     return result
 
+@register.filter
+def hash(h, key):
+    return h[key]
     
 def get_common_dict(context):
     """

@@ -7,9 +7,10 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^aktuality/', 'news.views.news'),
+    url(r'^aktuality/$', 'news.views.news'),
+    url(r'^galerie/$', 'news.views.gallery'),
+    url(r'^galerie/(?P<slug>\w*)/$', 'news.views.gallery'),
     url(r'^', include('cms.urls')),
-    #url(r'^', include('filer.server.urls')),
 )
 
 

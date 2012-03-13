@@ -28,6 +28,13 @@ def news(request):
     c['news'] = News.objects.filter(published__lte=datetime.now()).order_by('-published')
     return render_to_response('news.html', c)
 
-def gallery(request):
+def gallery(request, slug = False):
+    c = RequestContext(request)
+    if slug:
+        try:
+            c['gallery'] = models.Gallery.objects.get(is_public=True, title_slug=slug)
+            return render_to_response('gallery.html', c)
+        except ObjectDoesNotExist:
+            pass
     
-    pass
+    return render_to_response('galleries.html', c)
