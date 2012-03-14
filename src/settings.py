@@ -180,6 +180,7 @@ INSTALLED_APPS = (
     'contact',
     'news',
     'photologue',
+    'partners',
 )
 
 CMS_TEMPLATES = (

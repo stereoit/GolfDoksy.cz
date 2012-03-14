@@ -1,0 +1,7 @@
+{% for i in partners %}
+<div class="partner">
+<div class="name">{{ i.name }}</div>
+<img src="{{ i.logo.url }}" alt="" />
+<p>{{ i.description_html|safe }}</p>
+</div>
+{% endfor %}
