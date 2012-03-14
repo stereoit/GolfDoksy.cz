@@ -113,6 +113,15 @@ article header p {
 #aktuality {
     margin-top: 0;
 }
+
+#aktuality div.news {
+    margin: 1em;
+}
+
+#aktuality div.news .date_label { font-style:italic }
+#aktuality div.news div.title { font-weight:bold;font-size: 16px; margin-right: 2em; margin-bottom: 0.3em; }
+#aktuality div.news div.message { margin: 1em 1em 1.5em; width: 800px; font-size: 14px; }
+
 #menu {
     margin-right: -450px;
     position: absolute;
