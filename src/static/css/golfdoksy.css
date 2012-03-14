@@ -72,23 +72,29 @@ h1.statuscodes { text-align: center; font-size: 3em; color:#303030 }
      width: 450px;
 }
 #intro {
-    background: #FCFCDC;
+    /* background: #FCFCDC; */
     width: 300px;
     margin: 50px auto;
     padding: 1em;
-    color: #F3A01E;
+    color: #e9b96e;
+    font-size: 36px;
+    font-style: italic;
 }
+
+#intro em { font-style: italic; font-size: 48px }
+
 #wrapper { 
         background: none repeat scroll 0 0 white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         position: absolute;
-        top: 500px;
+        top: 400px;
         width: 100%;
 }
 article {
     margin: 1.5em auto;
     padding: 1.5em 0;
     width: 900px;
+    font-size: 14px;
 }
 article:after {
     clear: both;
@@ -110,17 +116,31 @@ article header p {
     font-style: italic;
     padding: 0 10px;
 }
+
+article h2 { margin: 1em 0;}
+article header p.back a { margin-right: 3em; margin-left: auto; color: red}
+article .content { padding-left: 1.5em;}
+
+article#kontakt { margin-bottom: 0;}
+article#cenik table { width: 90%; margin: auto; border: 1px solid #769B49}
+article#cenik table th { width: 20%; margin: auto; font-style: bold;}
+article#cenik table th.first { width: 35%; margin-left: 0px}
+article#cenik table td { width: 20%; margin: auto}
+article#cenik table td.first { width: 35%; margin-left: 0px}
+
+#opening_hours { margin: 1em 0;}
+
 #aktuality {
     margin-top: 0;
 }
 
-#aktuality div.news {
-    margin: 1em;
-}
+#news_tag { display: block; height: 230px; }
+#aktuality div.news { width: 30%; float: left; margin: 0.5em;}
 
-#aktuality div.news .date_label { font-style:italic }
-#aktuality div.news div.title { font-weight:bold;font-size: 16px; margin-right: 2em; margin-bottom: 0.3em; }
-#aktuality div.news div.message { margin: 1em 1em 1.5em; width: 800px; font-size: 14px; }
+#aktuality div.news div.title { font-weight:bold;font-size: 14px; margin-right: 2em; margin-bottom: 0.3em; }
+#aktuality div.news .date_label { font-style:italic; font-size: 11px }
+#aktuality div.news span { font-style:italic; font-size: 11px }
+#aktuality div.news div.message { font-size: 12px; margin: 0.5em 0 }
 
 #menu {
     margin-right: -450px;
@@ -158,6 +178,17 @@ header span {
 header span a { padding-left: 1em;}
 header span a:hover { text-decoration: none;}
 
+div.partner { margin: 1em 0; }
+div.partner div.name { font-weight: bold; font-size: 15px }
+div.partner div.logo { width: 250px; height: 100px; float: left; margin: auto;}
+div.partner div.description { font-style: italic; width: 500px; float: left; }
+
+div.gallery { float:left; width: 290px; height: 190px; background-color: rgb(246, 248, 240)}
+div.gallery a { display: block; width: 220px; height: 160px; margin: auto; }
+div.gallery a img { margin: auto; }
+div.gallery a strong { margin: auto; }
+div.gallery span { display: block; margin: auto; font-size: 11px; color: #555753;}
+
 #header { width: 1000px; height: 117px; text-align: left; background: url(/media/img/background-header.png) no-repeat; }
 .clear { clear: both; }
 .right { text-align: right }
@@ -168,7 +199,7 @@ header span a:hover { text-decoration: none;}
 #content-right { float: left; background-color: rgb(233, 236, 220); width: 304px; margin-right: 30px; margin-top: 24px; }
 #content-left-services { float: left; width: 940px; margin-left: 30px; margin-right: 30px; margin-top: 24px; }
 #content-background { background: rgb(246, 248, 240) url(/media/img/background-content-bottom.png) no-repeat; height: 16px; }
-#footer { width: 100%; margin: 10px auto 0px; background: url(../img/footer.png) no-repeat center bottom; text-align: left; height: 140px; }
+#footer { width: 100%; margin: 0px auto; background: url(../img/footer.png) no-repeat center bottom; text-align: left; height: 140px; }
 #sitemap { width: 1000px; margin: 0px auto; position: relative;}
 #header-left { margin-left: 30px; width: 226px; height: 117px; float: left; }
 #header-right { width: 744px; height: 117px; float: left; }
@@ -219,10 +250,10 @@ blockquote { font-style: italic; margin-bottom: 15px; }
 
 /* Contacts */
 #contacts { width: 900px; margin: 0px auto; position: relative;}
-#contacts .column { display: block; height: 170px; float: left; margin-right: 1em; font-size: 12px; color: rgb(100, 100, 100); margin-top: 36px; line-height: 18px; }
-.column-1 { width: 150px; }
-.column-2 { width: 150px; }
-.column-3 { width: 150px; }
+.column { display: block; height: 170px; float: left; margin-right: 1em; color: rgb(100, 100, 100); margin-top: 36px; line-height: 18px; }
+.column-1 { width: 23%; }
+.column-2 { width: 23%; }
+.column-3 { width: 23%; }
 .column-4 { width: 126px; visibility:hidden; }
 .column-5 { width: 306px; padding: 0;  }
 .column-5-top { height: 95px; display: block; }
@@ -291,4 +322,3 @@ a.email-addess:hover { color: black; text-decoration: underline; }
     position: absolute;
     top: 43px;
     width: 32px;
-}

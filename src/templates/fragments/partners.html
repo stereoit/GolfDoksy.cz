@@ -1,7 +1,10 @@
 {% for i in partners %}
 <div class="partner">
-<div class="name">{{ i.name }}</div>
-<img src="{{ i.logo.url }}" alt="" />
-<p>{{ i.description_html|safe }}</p>
+  <div class="name">{{ i.name }}</div>
+  <div>
+    <div class="logo"><img src="{{ i.logo.url }}" alt="" /></div>
+    <div class="description"><p>{{ i.description_html|safe }}</p></div>
+  </div>
+  <div style="clear:both;"></div>
 </div>
 {% endfor %}
