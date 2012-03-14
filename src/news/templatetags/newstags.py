@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from django import template
+from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.template.defaultfilters import stringfilter
 from django.utils.encoding import force_unicode
 from django.utils.datastructures import SortedDict
 from django.utils.translation import ugettext as _
-import logging
+import logging, random
 from datetime import datetime
 from news import models
 import photologue
@@ -29,13 +30,23 @@ def news_tag(context, limit = None):
 def gallery_tag(context, limit = None):
     result = context
 
-    qs = photologue.models.Gallery.objects.filter(is_public=True, ).order_by('-date_added')
+    qs = photologue.models.Gallery.objects.filter(is_public=True).order_by('-date_added')
 
     if limit:
         qs = qs[:limit]
 
     result['galleries'] = qs
     return result
+
+@register.simple_tag
+def announcement_background():
+    try:
+        gallery = photologue.models.Gallery.objects.get(title_slug = 'announcement', is_public=False)
+    except ObjectDoesNotExist:
+        return ''
+
+    photo = gallery.photos.filter(is_public=True).order_by('?')[0]
+    return photo.image.url
 
 @register.filter
 def hash(h, key):
