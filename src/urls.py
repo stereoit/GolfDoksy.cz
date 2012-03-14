@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^photologue/', include('photologue.urls')),
     url(r'^aktuality/$', 'news.views.news'),
     url(r'^galerie/$', 'news.views.gallery'),
-    url(r'^galerie/(?P<slug>\w*)/$', 'news.views.gallery'),
+    url(r'^galerie/(?P<slug>[a-zA-Z0-9_.-]*)/$', 'news.views.gallery'),
     url(r'^', include('cms.urls')),
 )
 
