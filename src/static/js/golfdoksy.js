@@ -29,7 +29,6 @@ $('document').ready(function() {
     els.click(function(e){
         e.preventDefault();
         var id = $(this).attr("href");
-        console.log($(id).offset().top - header_height);
         $('html,body').addClass("scrolling").animate({
             scrollTop: $(id).offset().top - header_height + "px"
         },1000).removeClass("scrolling");
