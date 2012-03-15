@@ -6,6 +6,7 @@
 {% block base_content %}
     <div id="wrapper">
       <div class="article" id="aktuality">
+        <span id="home-news"></span>
         <div class="header">
         <h1>Aktuality</h1>
         <p>Novinky a zprávy ze sociálních sítí</p>
@@ -20,7 +21,7 @@
         <div class="header">
         <h1>Hřiště</h1>
         <p>Popis a možnosti našich hřišť (popis, obtížnost, lokalita)</p>
-        <p class="back"><a href="#home">zpět</a></p>
+        <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
           {% placeholder hriste %}
@@ -30,7 +31,7 @@
         <div class="header">
         <h1>Klub</h1>
         <p>Vše podstatné o našem klubu a členství (o nás, historie)</p>
-        <p class="back"><a href="#home">zpět</a></p>
+        <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
           {% placeholder klub %}
@@ -40,7 +41,7 @@
         <div class="header">
         <h1>Ceník</h1>
         <p>Vstup, driving range, akademie</p>
-        <p class="back"><a href="#home">zpět</a></p>
+        <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
           <div id="cenik_tag">{% placeholder cenik %}</div>
@@ -50,7 +51,7 @@
         <div class="header">
         <h1>Fotogalerie</h1>
         <p>Život s Golf Club Doksy, obrazem</p>
-        <p class="back"><a href="#home">zpět</a></p>
+        <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
           <div id=gallery_tag">{% gallery_tag 6 %}</div>
@@ -61,7 +62,7 @@
         <div class="header">
         <h1>Partneři</h1>
         <p>Bez nich by to ani nešlo</p>
-        <p class="back"><a href="#home">zpět</a></p>
+        <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
           {% placeholder partneri %}
@@ -76,7 +77,7 @@
         <div class="header">
         <h1>Kontakt</h1>
         <p>email, mobil, odkazy</p>
-        <p class="back"><a href="#home" class="scroll" >zpět</a></p>
+        <p class="back"><a href="#home-news" class="scroll" >zpět</a></p>
         </div class="header">
         <div>
           <div id="opening_hours">{% placeholder oteviraci_doba %}</div>

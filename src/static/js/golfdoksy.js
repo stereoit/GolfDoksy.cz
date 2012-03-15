@@ -4,7 +4,7 @@ $('document').ready(function() {
     //$.localScroll();
 
     var scrolls, paddings,
-        els = $("#logo, #menu a"),
+        els = $("#logo, #menu a, p.back a"),
         marker = $("#marker");
     $(window).scroll(function(){
         var scroll = $(this).scrollTop();
