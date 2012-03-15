@@ -5,7 +5,7 @@
 
 {% block top %}
     <div id="top">
-        <span><a href="#home" id="logo" class="golfer1">GolfDoksy.cz</a></span>
+        <span><a href="/" id="logo" class="golfer1">GolfDoksy.cz</a></span>
         <ul id="menu">
           <li><a href="/">Návrat na hlavní stránku</a></li>
         </ul>
@@ -14,7 +14,20 @@
 {% endblock %}
 
 {% block base_content %}
-      <div id="content">
-      {% block content %}{% endblock %}
+      <div id="clean_content">
+      {% block content %}
+      <h1>Content h1</h1>
+      <h2>Content h2</h2>
+      <h3>Content h3</h3>
+      <h4>Content h4</h4>
+      <p>This is the content page in 'p'</p>
+      <ul>
+        <li>Item 1 </li>
+        <li>Item 2 </li>
+        <li>Item 3 </li>
+        <li>Item 4 </li>
+        <li>Item 5 </li>
+      </ul>
+      {% endblock %}
       </div>
 {% endblock %}
