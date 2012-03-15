@@ -1,70 +1,10 @@
-{% extends "base.html" %}
+{% extends "clean.html" %}
 {% load cms_tags %}
 {% load newstags %}
 
-{% block base_content %}
-    <div id="home"></div>
-    <header id="top">
-        <span><a href="#home" id="logo" class="golfer1">GolfDoksy.cz</a></span>
-        <ul id="menu">
-          <li><a href="#hriste">Hřiště</a></li>
-          <li><a href="#turnaje">Turnaje</a></li>
-          <li><a href="#klub">Klub</a></li>
-          <li><a href="#cenik">Ceník</a></li>
-          <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#partneri">Partneři</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-        <span id="marker"></span>
-    </header>
-    <div id="announcement">
-      <div id="description"><div id="intro" class="transparent rounded">{% placeholder intro_left %}</div></div>
-      <div id="description_right" >{% placeholder intro_right %}</div>
-    </div>
-    <section id="wrapper">
-      <article id="aktuality">
-        <header>
-        <h1>Aktuality</h1>
-        <p>Novinky a zprávy ze sociálních sítí</p>
-        </header>
-        {% gallery_tag 4 %}
-      </article>
-        <!-- sekce paticky -->
-        <div id="footer">
-          <div id="sitemap">
-            <div class="column column-1">
-                <h4>{% placeholder company_address_label %}</h4>
-                <p>
-                    GolfDoksy o.s.<br />
-                    Sport Areál Termit<br />
-                    472 01 Doksy<br />
-                    Česká Republika<br /><br />
-                </p>
-            </div><!-- div.column-1 -->
-            <div class="column column-2">
-                <h4>{% placeholder how_to_contact_us_label %}</h4>
-                <p>
-                +420 773 885 311<br />
-                +421 948 023 011<br />
-                <a href="mailto:info@golfdoksy.cz">info@golfdoksy.cz</a><br />
-                <a href="kontakt#">{% placeholder contact_form_label %}</a><br />
-                <a href="http://www.golfdoksy.cz/">www.golfdoksy.cz</a>
-                </p>
-            </div><!-- div.column-2 -->
-            <div class="column column-3">
-                <h4>Sociální sítě</h4>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Google+</a></li>
-                </ul>
-            </div><!-- div.column-3 -->
-            <div id="copyright">
-                <p> Copyright &copy; 2010 - {% now "Y" %} GolfDoksy o.s. </p>
-            </div><!-- div.column-5 -->
-            <div class="clear"></div>
-          </div> <!-- div#sitemap -->
-        </div><!-- div#footer -->
 
-    </section>
+{% block content %}
+        <h1>Fotogalerie</h1>
+        <p>Golf Club Doksy obrazem</p>
+        {% gallery_tag %}
 {% endblock %}

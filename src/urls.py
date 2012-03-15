@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.generic.simple import direct_to_template
 from django.conf import settings
 from django.contrib import admin
 
@@ -11,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^aktuality/$', 'news.views.news'),
     url(r'^galerie/$', 'news.views.gallery'),
     url(r'^galerie/(?P<slug>[a-zA-Z0-9_.-]*)/$', 'news.views.gallery'),
+    url(r'^clean/$', direct_to_template,{'template':'clean.html'}, name="clean"),
     url(r'^', include('cms.urls')),
 )
 
