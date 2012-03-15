@@ -1,4 +1,4 @@
-{% load cms_tags sekizai_tags %}{% load cms_tags %}{% load cache menu_tags %}{% load menu_tags %}<!DOCTYPE html>
+{% load cms_tags sekizai_tags %}{% load cms_tags %}{% load cache menu_tags %}{% load menu_tags %}{% load newstags %}<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="{{ request.LANGUAGE_CODE }}" xml:lang="{{ request.LANGUAGE_CODE }}">
 <head>
     <title>{% page_attribute page_title %} - GolfDoksy.cz - {% now "Y" %}</title>
@@ -28,13 +28,44 @@
 </head>
 
 <body>
-{% comment %}
-{% show_menu %}
-{% show_menu_below_id %}
-{% show_sub_menu %}
-{% show_breadcrumb %}
-{% endcomment %}
-{% block base_content %} Nothing {% endblock %}
+<div id="page">
+
+  {% block top %}
+    <span id="home"></div>
+    <div id="top">
+        <span><a href="#home" id="logo" class="golfer1">GolfDoksy.cz</a></span>
+        <ul id="menu">
+          <li><a href="#aktuality">Aktuality</a></li>
+          <li><a href="#hriste">Hřiště</a></li>
+          <li><a href="#klub">Klub</a></li>
+          <li><a href="#cenik">Ceník</a></li>
+          <li><a href="#galerie">Fotogalerie</a></li>
+          <li><a href="#partneri">Partneři</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <span id="marker"></span>
+    </div>
+    <div id="announcement" style="background-image: url('{% announcement_background %}');">
+      <div id="description"><div id="intro">{% placeholder intro_left %}</div></div>
+      <div id="description_right" >{% placeholder intro_right %}</div>
+    </div>
+  {% endblock %}
+
+  {% block base_content %}{% endblock %}
+
+  {% block footer %}
+    <!-- sekce paticky -->
+    <div id="footer">
+      <div id="sitemap">
+        <div id="copyright">
+            <p> Copyright &copy; 2010 - {% now "Y" %} GolfDoksy o.s. </p>
+        </div><!-- div.column-5 -->
+        <div class="clear"></div>
+      </div> <!-- div#sitemap -->
+    </div><!-- div#footer -->
+  {% endblock %}
+
+</div>
 {% render_block "js" %}
 </body>
 </html>

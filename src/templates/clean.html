@@ -3,27 +3,18 @@
 {% load newstags %}
 {% load partnertags %}
 
-{% block base_content %}
-    <div id="home"></div>
-    <header id="top">
+{% block top %}
+    <div id="top">
         <span><a href="#home" id="logo" class="golfer1">GolfDoksy.cz</a></span>
         <ul id="menu">
           <li><a href="/">Návrat na hlavní stránku</a></li>
         </ul>
         <span id="marker"></span>
-    </header>
-    <div>
-      <article id="content">
-      {% block content %}{% endblock %}
-      </article>
-        <!-- sekce paticky -->
-        <div id="footer">
-          <div id="sitemap">
-            <div id="copyright">
-                <p> Copyright &copy; 2010 - {% now "Y" %} GolfDoksy o.s. </p>
-            </div><!-- div.column-5 -->
-            <div class="clear"></div>
-          </div> <!-- div#sitemap -->
-        </div><!-- div#footer -->
     </div>
+{% endblock %}
+
+{% block base_content %}
+      <div id="content">
+      {% block content %}{% endblock %}
+      </div>
 {% endblock %}

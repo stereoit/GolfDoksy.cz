@@ -4,25 +4,7 @@
 {% load partnertags %}
 
 {% block base_content %}
-    <div id="home"></div>
-    <header id="top">
-        <span><a href="#home" id="logo" class="golfer1">GolfDoksy.cz</a></span>
-        <ul id="menu">
-          <li><a href="#aktuality">Aktuality</a></li>
-          <li><a href="#hriste">Hřiště</a></li>
-          <li><a href="#klub">Klub</a></li>
-          <li><a href="#cenik">Ceník</a></li>
-          <li><a href="#galerie">Fotogalerie</a></li>
-          <li><a href="#partneri">Partneři</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-        <span id="marker"></span>
-    </header>
-    <div id="announcement" style="background-image: url('{% announcement_background %}');">
-      <div id="description"><div id="intro">{% placeholder intro_left %}</div></div>
-      <div id="description_right" >{% placeholder intro_right %}</div>
-    </div>
-    <section id="wrapper">
+    <div id="wrapper">
       <article id="aktuality">
         <header>
         <h1>Aktuality</h1>
@@ -146,14 +128,5 @@
         </div><!-- div.contacts -->
       </article>
 
-        <!-- sekce paticky -->
-        <div id="footer">
-          <div id="sitemap">
-            <div id="copyright">
-                <p> Copyright &copy; 2010 - {% now "Y" %} GolfDoksy o.s. </p>
-            </div><!-- div.column-5 -->
-            <div class="clear"></div>
-          </div> <!-- div#sitemap -->
-        </div><!-- div#footer -->
-    </section>
+    </div>
 {% endblock %}
