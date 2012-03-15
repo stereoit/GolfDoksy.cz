@@ -5,14 +5,17 @@ a { color: #769B49; text-decoration: none;font-weight:bold; outline: 0; }
 a:hover { color: #457319; text-decoration: underline; }
 h1, h2, h3, h4 { font-weight: bold; }
 
+#page { padding-top: 1px; }
+
 #top {
     background: url('../img/top-menu-background.png') repeat-x 0 0;
     border-bottom: 1px solid #222222;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     height: 45px;
     position: fixed;
+    top: -1px;
     width: 100%;
-   z-index: 10;
+    z-index: 10;
 }
 
 #top a { color: white}
@@ -25,7 +28,23 @@ h1, h2, h3, h4 { font-weight: bold; }
 #top span a { padding-left: 1em;}
 #top span a:hover { text-decoration: none;}
 
-#footer { width: 100%; margin: 0px auto; background: url(../img/footer.png) no-repeat center bottom; text-align: left; height: 140px; z-index: 15;}
+#wrapper { 
+        background: none repeat scroll 0 0 white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 5;
+        margin-top: 400px;
+        width: 100%;
+}
+
+#footer { 
+        width: 100%; 
+        margin: 0px auto; 
+        background: url(../img/footer.png) no-repeat center bottom; 
+        text-align: left; 
+        height: 140px; 
+        position:relative;
+}
 
 #announcement {
         background: url("../img/announcement-background.jpg") no-repeat scroll center top;
@@ -94,14 +113,6 @@ h1.statuscodes { text-align: center; font-size: 3em; color:#303030 }
 
 #intro em { font-style: italic; font-size: 48px }
 
-#wrapper { 
-        background: none repeat scroll 0 0 white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        position: relative;
-        z-index: 5;
-        top: 400px;
-        width: 100%;
-}
 article {
     margin: 1.5em auto;
     padding: 1.5em 0;
