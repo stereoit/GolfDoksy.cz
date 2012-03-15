@@ -196,7 +196,7 @@ THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.filters',
 )
 
-LOG_BASE_PATH = os.path.join(os.path.split(os.path.split(PROJECT_ROOT)[0])[0], 'logs')
+LOG_BASE_PATH = os.path.join(os.path.split(PROJECT_ROOT)[0], 'logs')
 
 
 LOGGING = {
