@@ -38,6 +38,7 @@
         <header>
         <h1>Hřiště</h1>
         <p>Popis a možnosti našich hřišť (popis, obtížnost, lokalita)</p>
+        <p class="back"><a href="#home">zpět</a></p>
         </header>
         <div class="content">
           {% placeholder hriste %}
@@ -47,6 +48,7 @@
         <header>
         <h1>Klub</h1>
         <p>Vše podstatné o našem klubu a členství (o nás, historie)</p>
+        <p class="back"><a href="#home">zpět</a></p>
         </header>
         <div class="content">
           {% placeholder klub %}
@@ -56,6 +58,7 @@
         <header>
         <h1>Ceník</h1>
         <p>Vstup, driving range, akademie</p>
+        <p class="back"><a href="#home">zpět</a></p>
         </header>
         <div class="content">
           <div id="cenik_tag">{% placeholder cenik %}</div>
@@ -65,7 +68,7 @@
         <header>
         <h1>Fotogalerie</h1>
         <p>Život s Golf Club Doksy, obrazem</p>
-        <p class="back"><a href="#home">na začátek</a></p>
+        <p class="back"><a href="#home">zpět</a></p>
         </header>
         <div class="content">
           <div id=gallery_tag">{% gallery_tag 6 %}</div>
@@ -76,16 +79,22 @@
         <header>
         <h1>Partneři</h1>
         <p>Bez nich by to ani nešlo</p>
+        <p class="back"><a href="#home">zpět</a></p>
         </header>
         <div class="content">
           {% placeholder partneri %}
+          <div class="partner">
+          <table>
           {% partners_tag %}
+          </table>
+          </div>
         </div>
       </article>
       <article id="kontakt">
         <header>
         <h1>Kontakt</h1>
         <p>email, mobil, odkazy</p>
+        <p class="back"><a href="#home">zpět</a></p>
         </header>
         <div>
           <div id="opening_hours">{% placeholder oteviraci_doba %}</div>

@@ -1,3 +1,4 @@
+{% comment %}
 {% for i in partners %}
 <div class="partner">
   <div class="name">{{ i.name }}</div>
@@ -7,4 +8,12 @@
   </div>
   <div style="clear:both;"></div>
 </div>
+{% endfor %}
+{% endcomment %}
+{% for i in partners %}
+<tr><td colspan="2" class="name">{{ i.name }}</td></tr>
+<tr>
+    <td class="logo"><img src="{{ i.logo.url }}" alt="" /></td>
+    <td class="description">{{ i.description_html|safe }}</td>
+</tr>
 {% endfor %}

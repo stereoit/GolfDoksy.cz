@@ -118,7 +118,7 @@ article header p {
 }
 
 article h2 { margin: 1em 0;}
-article header p.back a { margin-right: 3em; margin-left: auto; color: red}
+article header p.back a { float:right; margin-top:1em;}
 article .content { padding-left: 1.5em;}
 
 article#kontakt { margin-bottom: 0;}
@@ -179,12 +179,12 @@ header span a { padding-left: 1em;}
 header span a:hover { text-decoration: none;}
 
 div.partner { margin: 1em 0; }
-div.partner div.name { font-weight: bold; font-size: 15px }
-div.partner div.logo { width: 250px; height: 100px; float: left; margin: auto;}
-div.partner div.description { font-style: italic; width: 500px; float: left; }
+div.partner .name { font-weight: bold; font-size: 15px }
+div.partner .logo { width: 250px; height: 100px; vertical-align: middle; text-align: center;}
+div.partner .description { font-style: italic; vertical-align: middle }
 
-div.gallery { float:left; width: 290px; height: 190px; background-color: rgb(246, 248, 240)}
-div.gallery a { display: block; width: 220px; height: 160px; margin: auto; }
+div.gallery { float:left; width: 290px; height: 190px; background-color: rgb(246, 248, 240); text-align:center;}
+div.gallery a { display: block; width: 220px; padding-left:35px} 
 div.gallery a img { margin: auto; }
 div.gallery a strong { margin: auto; }
 div.gallery span { display: block; margin: auto; font-size: 11px; color: #555753;}
