@@ -6,10 +6,10 @@
 {% block base_content %}
     <div id="wrapper">
       <div class="article" id="aktuality">
-        <header>
+        <div class="header">
         <h1>Aktuality</h1>
         <p>Novinky a zprávy ze sociálních sítí</p>
-        </header>
+        </div class="header">
         <div class="content">
           <div id="news_tag">{% news_tag 6 %}</div>
           <div class="clear"></div>
@@ -17,52 +17,52 @@
         </div>
       </div class="article">
       <div class="article" id="hriste">
-        <header>
+        <div class="header">
         <h1>Hřiště</h1>
         <p>Popis a možnosti našich hřišť (popis, obtížnost, lokalita)</p>
         <p class="back"><a href="#home">zpět</a></p>
-        </header>
+        </div class="header">
         <div class="content">
           {% placeholder hriste %}
         </div>
       </div class="article">
       <div class="article" id="klub">
-        <header>
+        <div class="header">
         <h1>Klub</h1>
         <p>Vše podstatné o našem klubu a členství (o nás, historie)</p>
         <p class="back"><a href="#home">zpět</a></p>
-        </header>
+        </div class="header">
         <div class="content">
           {% placeholder klub %}
         </div>
       </div class="article">
       <div class="article" id="cenik">
-        <header>
+        <div class="header">
         <h1>Ceník</h1>
         <p>Vstup, driving range, akademie</p>
         <p class="back"><a href="#home">zpět</a></p>
-        </header>
+        </div class="header">
         <div class="content">
           <div id="cenik_tag">{% placeholder cenik %}</div>
         </div>
       </div class="article">
       <div class="article" id="galerie">
-        <header>
+        <div class="header">
         <h1>Fotogalerie</h1>
         <p>Život s Golf Club Doksy, obrazem</p>
         <p class="back"><a href="#home">zpět</a></p>
-        </header>
+        </div class="header">
         <div class="content">
           <div id=gallery_tag">{% gallery_tag 6 %}</div>
           <a href="galerie/" >Archív kompletní fotogalerie</a>
         </div>
       </div class="article">
       <div class="article" id="partneri">
-        <header>
+        <div class="header">
         <h1>Partneři</h1>
         <p>Bez nich by to ani nešlo</p>
         <p class="back"><a href="#home">zpět</a></p>
-        </header>
+        </div class="header">
         <div class="content">
           {% placeholder partneri %}
           <div class="partner">
@@ -73,11 +73,11 @@
         </div>
       </div class="article">
       <div class="article" id="kontakt">
-        <header>
+        <div class="header">
         <h1>Kontakt</h1>
         <p>email, mobil, odkazy</p>
-        <p class="back"><a href="#home">zpět</a></p>
-        </header>
+        <p class="back"><a href="#home" class="scroll" >zpět</a></p>
+        </div class="header">
         <div>
           <div id="opening_hours">{% placeholder oteviraci_doba %}</div>
         <div style="float:left;" class="two-column">

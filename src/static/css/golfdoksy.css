@@ -143,10 +143,10 @@ div.article:after {
     content: " ";
     display: block;
 }
-div.article header {
+div.article div.header {
     margin: 0 0 20px;
 }
-div.article header p {
+div.article div.header p {
     color: #769B49;
     display: inline;
     font-size: 17px;
@@ -155,7 +155,7 @@ div.article header p {
 }
 
 div.article h2 { margin: 1em 0;}
-div.article header p.back a { float:right; margin-top:1em;}
+div.article div.header p.back a { float:right; margin-top:1em;}
 div.article .content { padding-left: 1.5em;}
 
 div.article#kontakt { margin-bottom: 0;}
@@ -171,7 +171,7 @@ div.article#cenik table td.first { width: 35%; margin-left: 0px}
     margin-top: 0;
 }
 
-#news_tag { display: block; height: 230px; }
+#news_tag { display: block; }
 #aktuality div.news { width: 30%; float: left; margin: 0.5em;}
 
 #aktuality div.news div.title { font-weight:bold;font-size: 14px; margin-right: 2em; margin-bottom: 0.3em; }
