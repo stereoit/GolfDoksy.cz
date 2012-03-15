@@ -25,7 +25,7 @@ h1, h2, h3, h4 { font-weight: bold; }
 #top span a { padding-left: 1em;}
 #top span a:hover { text-decoration: none;}
 
-#footer { width: 100%; margin: 0px auto; background: url(../img/footer.png) no-repeat center bottom; text-align: left; height: 140px;}
+#footer { width: 100%; margin: 0px auto; background: url(../img/footer.png) no-repeat center bottom; text-align: left; height: 140px; z-index: 15;}
 
 #announcement {
         background: url("../img/announcement-background.jpg") no-repeat scroll center top;
@@ -36,6 +36,7 @@ h1, h2, h3, h4 { font-weight: bold; }
         font-weight: bold;
         font-size: 18px;
         color: white;
+        z-index:3;
 }
 
 #announcementclear {
@@ -96,7 +97,8 @@ h1.statuscodes { text-align: center; font-size: 3em; color:#303030 }
 #wrapper { 
         background: none repeat scroll 0 0 white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        position: absolute;
+        position: relative;
+        z-index: 5;
         top: 400px;
         width: 100%;
 }
