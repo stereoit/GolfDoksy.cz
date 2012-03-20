@@ -1,13 +1,24 @@
 {% extends "clean.html" %}
 {% load cms_tags %}
 {% load newstags %}
+{% load sekizai_tags %}
 
 {% block content %}
-<div>
+<div id="gallery_detail">
   <h1>{{ gallery.title }}</h1>
   <p>{{ gallery.description }}</p>
   {% for photo in gallery.photos.all %}
-    <a href="{{ photo.image.url }}"><img alt="" src="{{ photo.get_thumbnail_url }}" /></a>
+    <a href="{{ photo.image.url }}" class="colorbox" rel="{{ gallery.title }}" title="{{ photo.title }}" ><img alt="" src="{{ photo.get_thumbnail_url }}" /></a>
   {% endfor %}
 </div>
 {% endblock %}
+
+{% block javascript %}
+  <script src="{{ STATIC_URL }}js/jquery.colorbox-min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/gallery.js"></script>
+{% endblock %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/colorbox.css" media="projection, screen" />
+{% endblock %}
+

@@ -78,9 +78,9 @@ h3 {
 
 #clean_content { 
     width: 900px; 
-    background: rgb(246, 248, 240) url(/media/img/background-content.png) no-repeat; 
     margin: 6em auto;
 }
+#clean_content p { margin-top: 0.5em;}
 
 #servererror { 
         width: 900px;
@@ -212,11 +212,19 @@ div.partner .name { font-weight: bold; font-size: 15px }
 div.partner .logo { width: 250px; height: 100px; vertical-align: middle; text-align: center;}
 div.partner .description { font-style: italic; vertical-align: middle }
 
-div.gallery { float:left; width: 290px; height: 190px; background-color: rgb(246, 248, 240); text-align:center;}
-div.gallery a { display: block; width: 220px; padding-left:35px} 
-div.gallery a img { margin: auto; }
+div#galleries { margin-top: 2em; }
+
+div.gallery { float:left; width: 290px; height: 190px; text-align:center;}
+div.gallery a { display: block; width: 220px; padding-left:35px;}
+div.gallery a img { margin: auto;border: solid 1px #DDD; padding: 5px;}
+div.gallery a:hover img { margin: auto;border: solid 1px rgb(246, 248, 240); box-shadow: 1px 1px 5px #999; -webkit-transition:all .2s ease-in;}
 div.gallery a strong { margin: auto; }
 div.gallery span { display: block; margin: auto; font-size: 11px; color: #555753;}
+
+/* detailni stranka galerie */
+div#gallery_detail a { margin: 0.5em;}
+div#gallery_detail a img { margin: auto;border: solid 1px #DDD; padding: 5px;}
+div#gallery_detail a:hover img { margin: auto;border: solid 1px rgb(246, 248, 240); box-shadow: 1px 1px 5px #999; -webkit-transition:all .2s ease-in;}
 
 .clear { clear: both; }
 .right { text-align: right }

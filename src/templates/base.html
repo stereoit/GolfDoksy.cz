@@ -18,13 +18,23 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/golfdoksy.css" media="projection, screen" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     {% render_block "css" %}
+    {% block head_css %}{% endblock %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.scrollTo-1.4.2-min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.localscroll-1.2.7-min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/golfdoksy.js"></script>
-    {% comment %} 
-    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.6.1.js"></script>
-       {% plugins_media %}{% endcomment %}
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30182612-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    {% block javascript %}
+    {% endblock %}
 </head>
 
 <body>
@@ -67,5 +77,6 @@
 
 </div>
 {% render_block "js" %}
+{% block page_script %}{% endblock %}
 </body>
 </html>

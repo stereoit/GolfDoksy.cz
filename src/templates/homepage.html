@@ -55,7 +55,7 @@
         </div class="header">
         <div class="content">
           <div id=gallery_tag">{% gallery_tag 6 %}</div>
-          <a href="galerie/" >Archív kompletní fotogalerie</a>
+          <a href="galerie/" >všechny fotogalerie</a>
         </div>
       </div class="article">
       <div class="article" id="partneri">
@@ -130,4 +130,11 @@
       </div class="article">
 
     </div>
+{% endblock %}
+
+
+{% block javascript %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.scrollTo-1.4.2-min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.localscroll-1.2.7-min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/golfdoksy.js"></script>
 {% endblock %}
