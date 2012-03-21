@@ -185,7 +185,7 @@ INSTALLED_APPS = (
 
 CMS_TEMPLATES = (
     ('homepage.html', 'Homepage'),
-    ('template_2.html', 'Template Two'),
+    ('clean.html', 'Clean page'),
 )
 
 THUMBNAIL_PROCESSORS = (
