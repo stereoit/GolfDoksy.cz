@@ -149,6 +149,8 @@ TEMPLATE_DIRS = (
     rel_path('templates'),
 )
 
+FILER_IMAGE_USE_ICON = True
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -223,6 +223,8 @@ div.partner .name { font-weight: bold; font-size: 15px }
 div.partner .logo { width: 250px; height: 100px; vertical-align: middle; text-align: center;}
 div.partner .description { font-style: italic; vertical-align: middle }
 
+div#gallery_tag { margin-bottom: 2em; }
+
 div#galleries { margin-top: 2em; }
 
 div.gallery { float:left; width: 290px; height: 190px; text-align:center;}
