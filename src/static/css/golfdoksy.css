@@ -88,8 +88,8 @@ h3 {
 #clean_content .news .message { font-size: 14px; color: #444444;}
 
 
-#stanovy { width: 80%; margin: auto;}
-#stanovy p { margin: 1em;}
+#stanovy { width: 90%; margin: auto;}
+#stanovy p { margin: 1em; text-align:justify;}
 #stanovy ul {list-style-type:circle; margin-left: 3em; font-size: 14px}
 
 #servererror { 
