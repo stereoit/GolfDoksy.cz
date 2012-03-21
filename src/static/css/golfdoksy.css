@@ -81,7 +81,7 @@ h3 {
     margin: 6em auto;
 }
 #clean_content p { font-size: 14px; margin: 0.5em; }
-#clean_content .news { margin: 1em auto 2em 0.5em; width: 80%; border-bottom: 1px solid transparent; padding-bottom: 1em;}
+#clean_content .news { margin: 1.5em auto 0.5em 0.5em; width: 80%; border-bottom: 1px solid transparent; padding-bottom: 1em;}
 #clean_content .news:hover {  border-bottom: 1px dashed #DDDDDD;}
 #clean_content .news .title { font-size: 16px; color: #769B49; font-weight: bold; margin: 0.3em auto;}
 #clean_content .news .subtitle { font-size: 12px; color: rgb(100, 100, 100); font-style: italic; margin: 0.5em 0;}
