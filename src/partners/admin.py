@@ -1,4 +1,7 @@
 from django.contrib import admin
-import models
+from partners.models import Partner
 
-admin.site.register(models.Partner)
+admin.site.register(Partner)
+
+class PartnerAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("name",)}
