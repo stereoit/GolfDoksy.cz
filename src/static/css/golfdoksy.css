@@ -80,7 +80,12 @@ h3 {
     width: 900px; 
     margin: 6em auto;
 }
-#clean_content p { margin-top: 0.5em;}
+#clean_content p { font-size: 14px; margin: 0.5em; }
+#clean_content .news { margin: 1em auto 2em 0.5em; width: 80%; border-bottom: 1px solid transparent; padding-bottom: 1em;}
+#clean_content .news:hover {  border-bottom: 1px dashed #DDDDDD;}
+#clean_content .news .title { font-size: 16px; color: #769B49; font-weight: bold; margin: 0.3em auto;}
+#clean_content .news .subtitle { font-size: 12px; color: rgb(100, 100, 100); font-style: italic; margin: 0.5em 0;}
+#clean_content .news .message { font-size: 14px; color: #444444;}
 
 #servererror { 
         width: 900px;
@@ -159,7 +164,7 @@ div.article div.header p.back a { float:right; margin-top:1em;}
 div.article .content { padding-left: 1.5em;}
 
 div.article#kontakt { margin-bottom: 0;}
-div#cenik_tag table { width: 90%; margin: 2em auto; border-collapse: collapse; text-align:center; font-size: 12px;}
+div#cenik_tag table { width: 90%; margin: 2em auto 2em 0; border-collapse: collapse; text-align:center; font-size: 12px;}
 div#cenik_tag table th { font-size: 14px; font-weight: bold; color: #646464; border-bottom: 2px solid #769B49; padding: 10px 8px;}
 div#cenik_tag table th:first-child { text-align:left;}
 div#cenik_tag table td { color: #646464; padding: 9px 8px 4px; border-bottom: 1px solid #DDDDDD;}
@@ -232,23 +237,6 @@ div#gallery_detail a:hover img { margin: auto;border: solid 1px rgb(246, 248, 24
 .left { text-align: left }
 .center { text-align: center }
 #sitemap { width: 1000px; margin: 0px auto; position: relative;}
-.hoizontal-ule { width: 100%; height: 2px; background: url(/media/img/horizontal-rule.png) repeat-x;}
-.hoizontal-ule-margin { width: 100%; height: 2px; background: url(/media/img/horizontal-rule.png) repeat-x; margin-top: 15px; margin-bottom: 15px; }
-.hoizontal-ule-margin-bottom { width: 100%; height: 2px; background: url(/media/img/horizontal-rule.png) repeat-x; margin-bottom: 15px; }
-.h3-inline { display: inline; }
-
-/* BANNER */
-#banne-left p.banne-title { margin: 30px 0 0 30px; padding: 0; font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; font-size: 40px; font-weight: bold; line-height: 35px; color: white; text-shadow: rgb(150, 150, 150) 2px 2px 2px;}
-#banne-left p.banne-title span { color: rgb(233, 244, 188); }
-#banne-left p.banne-description { font-size: 14px; color: white; margin: 20px 0 0 30px; padding: 0; width: 472px; }
-#banne-right a.lean-moe { display: block; margin-top: 136px; color: rgb(69, 75, 41); text-tansfom: uppecase; font-size: 18px; text-align: center; text-decoration: none; font-weight: bold; font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; width: 175px; height: 47px; background-image:url(/media/img/button.png); line-height: 45px;}
-#banne-right a.lean-moe:hover { background-position: -175px; }
-
-a.sidebar-button { display: block; height: 44px; width: 246px; font-size: 18px; font-weight: bold; color: white; text-decoration: none; background: url(/media/img/button-sidebar.png) no-repeat; margin-top: 16px; line-height: 38px; font-family: Candaa, "Segoe UI", Optima, "Trebuchet MS", Trebuchet, Aial, Helvetica, sans-seif; text-indent: 20px; }
-a.sidebar-button:hover { background-position: -246px; }
-.strong-name { font-size: 14px; color: rgb(79, 83, 63); }
-.lright-gay { color: rgb(145, 147, 137); }
-blockquote { font-style: italic; margin-bottom: 15px; }
 
 /* Contacts */
 #contacts { width: 900px; margin: 0px auto; position: relative;}
@@ -273,13 +261,13 @@ blockquote { font-style: italic; margin-bottom: 15px; }
 div#copyright { color: rgb(117, 117, 117); text-align: right; position: absolute; right: 0px; top: 100px; height: 1.5em;margin: 0; }
 
 /* CONTENT */
-#contact_form label span { font-style:italic; font-weight:nomal; color:#D64000 }
-#contact_form #id_sender, #id_phone { width: 404px; height: 38px; border: 1px solid rgb(179, 179, 179); border-adius: 4px; font-size: 20px; font-family: Aial, Helvetica, sans-seif; color: black; text-indent: 7px; margin-bottom: 15px; }
-#contact_form #id_sender:focus, #id_phone:focus { border-color: black; background-color: white; }
-#contact_form #id_message { display: block; width: 390px; height: 170px; border: 1px solid rgb(179, 179, 179); border-adius: 4px; font-size: 13px; color: Black; font-family: Aial, Helvetica, sans-seif; padding: 7px; background-color: white; }
+#contact_form label span { font-style:italic; font-weight:normal; color:#D64000 }
+#contact_form #id_sender, #id_phone { width: 404px; height: 38px; border: 1px solid rgb(179, 179, 179); border-radius: 4px; font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #646464; text-indent: 7px; margin-bottom: 15px; }
+#contact_form #id_sender:focus, #id_phone:focus { border-color: #646464; background-color: white; }
+#contact_form #id_message { display: block; width: 390px; height: 170px; border: 1px solid rgb(179, 179, 179); border-radius: 4px; font-size: 14px; color: #646464; font-family: Arial, Helvetica, sans-serif; padding: 7px; background-color: white; }
 #contact_form #id_message:focus { border-color: black; }
 #contact_form #id_cc_myself { margin-top: 15px; }
-#contact_form #input-messagecopy { font-weight: nomal; font-size: 13px; display: inline; }
+#contact_form #input-messagecopy { font-weight: normal; font-size: 13px; display: inline; }
 #contact_form #input-send { display: block; width: 133px; height: 41px;  cursor: pointer; border-style: none; color: white; font-size: 18px; text-align: center; font-weight: bold; margin-top: 35px; float: right; margin-right: 92px; background-color: #769B49; }
 #contact_form #input-send:hover { background-position: -133px; }
 .sidebar-contact-left { width: 121px; float: left; }

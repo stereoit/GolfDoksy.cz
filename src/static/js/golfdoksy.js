@@ -19,7 +19,7 @@ $('document').ready(function() {
         els.each(function(i){
             paddings.push( $(this).offset().left + $(this).width()/2 + (i==0 ? -16 : 0) );
             var id = $(this).attr("href");
-        //    scrolls.push( $(id).offset().top + header_height);
+            scrolls.push( $(id).offset().top + header_height);
         });
         scrolls[1] = scrolls[1] + 200;
         $(window).trigger("scroll");
