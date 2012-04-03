@@ -22,4 +22,5 @@ if settings.DEBUG:
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     url(r'', include('django.contrib.staticfiles.urls')),
+    url(r'^openid/', include('django_openid_auth.urls')),
 ) + urlpatterns + staticfiles_urlpatterns()

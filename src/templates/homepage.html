@@ -9,10 +9,10 @@
         <span id="home-news"></span>
         <div class="header">
         <h1>Aktuality</h1>
-        <p>Novinky a zprávy ze sociálních sítí</p>
+        <p>{% placeholder aktuality_claim %}</p>
         </div class="header">
         <div class="content">
-          <div id="news_tag">{% news_tag 6 %}</div>
+          <div id="news_tag">{% news_tag 3 %}</div>
           <div class="clear"></div>
           <a href="aktuality/" >všechny novinky</a>
         </div>
@@ -20,7 +20,7 @@
       <div class="article" id="hriste">
         <div class="header">
         <h1>Hřiště</h1>
-        <p>Popis a možnosti našich hřišť (popis, obtížnost, lokalita)</p>
+        <p>{% placeholder hriste_claim %}</p>
         <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
@@ -30,7 +30,7 @@
       <div class="article" id="klub">
         <div class="header">
         <h1>Klub</h1>
-        <p>Vše podstatné o našem klubu a členství (o nás, historie)</p>
+        <p>{% placeholder klub_claim %}</p>
         <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
@@ -50,7 +50,7 @@
       <div class="article" id="galerie">
         <div class="header">
         <h1>Fotogalerie</h1>
-        <p>Život s Golf Club Doksy, obrazem</p>
+        <p>{% placeholder fotogalerie_claim %}</p>
         <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
@@ -62,7 +62,7 @@
       <div class="article" id="partneri">
         <div class="header">
         <h1>Partneři</h1>
-        <p>Bez nich by to ani nešlo</p>
+        <p>{% placeholder partneri_claim %}</p>
         <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
@@ -77,7 +77,7 @@
       <div class="article" id="kontakt">
         <div class="header">
         <h1>Kontakt</h1>
-        <p>email, mobil, odkazy</p>
+        <p>{% placeholder kontakt_claim %}</p>
         <p class="back"><a href="#home-news" class="scroll" >zpět</a></p>
         </div class="header">
         <div>
@@ -95,7 +95,7 @@
         <div class="column column-1">
                 <h4>Adresa</h4>
                 <p>
-                    GolfDoksy o.s.<br />
+                    Golf Club Doksy<br />
                     Sport Areál Termit<br />
                     472 01 Doksy<br />
                     Česká Republika<br /><br />
@@ -124,6 +124,7 @@
                     <li><a href="mailto:martin.kuzel@golfdoksy.cz">Martin Kužel</a></li>
                     <li><a href="mailto:zdenek.krenicky@golfdoksy.cz">Zdeněk Krenický</a></li>
                     <li><a href="mailto:jiri.pokorny@golfdoksy.cz">Jiří Pokorný</a></li>
+                    <li><a href="mailto:pavel.bernardyn@golfdoksy.cz">Pavel Bernardin</a></li>
                     <li><a href="mailto:robert.smol@golfdoksy.cz">Robert Šmol</a></li>
                 </ul>
             </div><!-- div.column-3 -->

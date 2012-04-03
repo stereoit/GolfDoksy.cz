@@ -183,6 +183,7 @@ INSTALLED_APPS = (
     'news',
     'photologue',
     'partners',
+#    'django_openid_auth',
 )
 
 CMS_TEMPLATES = (
@@ -199,6 +200,18 @@ THUMBNAIL_PROCESSORS = (
 )
 
 LOG_BASE_PATH = os.path.join(os.path.split(PROJECT_ROOT)[0], 'logs')
+
+OPENID_CREATE_USERS = False
+OPENID_UPDATE_DETAILS_FROM_SREG = False
+LOGIN_URL = '/openid/login/'
+LOGIN_REDIRECT_URL = '/'
+OPENID_SSO_SERVER_URL = 'https://www.google.com/accounts/o8/site-xrds?hd=golfdoksy.cz'
+
+#AUTHENTICATION_BACKENDS = (
+#    'django_openid_auth.auth.OpenIDBackend',
+#    'django.contrib.auth.backends.ModelBackend',
+#)
+
 
 
 LOGGING = {

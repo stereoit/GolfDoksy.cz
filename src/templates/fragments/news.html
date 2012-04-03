@@ -2,7 +2,7 @@
 <div class="news">
   <div class="title">{{ i.title }}</div>
   <div class="subtitle">
-      <span class="date_label">Dne:</span> <span>{{ i.published|date }}</span> <span class="date_label">Od:</span> <span>{{ i.published_by }}</span>
+      <span class="date_label">Dne:</span> <span>{{ i.published|date }}</span> {% comment %}<span class="date_label">Od:</span> <span>{{ i.published_by }}</span>{% endcomment %}
   </div>
   <div class="message">{{ i.text_html|safe }}</div>
 </div>

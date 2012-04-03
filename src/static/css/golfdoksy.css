@@ -4,6 +4,7 @@ strong { font-weight: bold; }
 a { color: #769B49; text-decoration: none;font-weight:bold; outline: 0; }
 a:hover { color: #457319; text-decoration: underline; }
 h1, h2, h3, h4 { font-weight: bold; margin: 0.5em 0; }
+h2, h3, h4 { color: #457319; }
 h1 {
     color: #333333;
     display: inline;
@@ -37,7 +38,7 @@ h3 {
     font-family: 'Cabin Condensed', sans-seif;
     font-size: 24px;
 }
-.golfer1 { background: url(../img/golf-sprite.png); background-position: 0px 0px; width: 17px;height: 32px; float: left;}
+.golfer1 { background: url(../img/golf-sprite.png); font-weight: normal;background-position: 0px 0px; width: 200px;height: 32px; float: left;}
 #top span a { padding-left: 1em;}
 #top span a:hover { text-decoration: none;}
 
@@ -201,6 +202,7 @@ div#cenik_tag table tbody tr:hover { background-color: #FCFCDC;}
 }
 #menu a {
     -moz-transition: all 200ms ease-in-out 0s;
+    font-size: 14px;
     color: #999999;
     display: inline-block;
     line-height: 46px;
