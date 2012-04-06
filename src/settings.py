@@ -204,7 +204,7 @@ LOG_BASE_PATH = os.path.join(os.path.split(PROJECT_ROOT)[0], 'logs')
 OPENID_CREATE_USERS = True
 OPENID_UPDATE_DETAILS_FROM_SREG = False
 LOGIN_URL = '/openid/login/'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/admin/'
 OPENID_SSO_SERVER_URL = 'https://www.google.com/accounts/o8/site-xrds?hd=golfdoksy.cz'
 
 AUTHENTICATION_BACKENDS = (
