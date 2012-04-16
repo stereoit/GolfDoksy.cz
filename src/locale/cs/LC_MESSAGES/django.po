@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-21 21:47+0100\n"
+"POT-Creation-Date: 2012-04-12 14:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgstr "autor"
 msgid "News"
 msgstr "novinky"
 
-#: partners/models.py:9
+#: partners/models.py:9 tournaments/models.py:9
 msgid "name"
 msgstr "jméno"
 
@@ -54,7 +54,7 @@ msgstr "jméno"
 msgid "logo"
 msgstr "logo"
 
-#: partners/models.py:12 partners/models.py:13
+#: partners/models.py:12 partners/models.py:13 tournaments/models.py:13
 msgid "description"
 msgstr "popisek"
 
@@ -77,3 +77,47 @@ msgstr "Partner"
 #: partners/models.py:24
 msgid "Partners"
 msgstr "Partneři"
+
+#: tournaments/models.py:9
+msgid "the name of the tournament"
+msgstr "název turnaje"
+
+#: tournaments/models.py:10
+msgid "slug name"
+msgstr "url odkazu"
+
+#: tournaments/models.py:10
+msgid "Name in the URL"
+msgstr "jméno v URL"
+
+#: tournaments/models.py:11
+msgid "start time"
+msgstr "začátek"
+
+#: tournaments/models.py:11
+msgid "Datetime of start"
+msgstr "Datum a čas startu"
+
+#: tournaments/models.py:12
+msgid "is listed"
+msgstr "publikován"
+
+#: tournaments/models.py:12
+msgid "Is the tournament listed?"
+msgstr "Je turnaj vyvěšen veřejně?"
+
+#: tournaments/models.py:13
+msgid "long description"
+msgstr "dlouhý popisek"
+
+#: tournaments/models.py:14
+msgid "winner"
+msgstr "vítěz"
+
+#: tournaments/models.py:18
+msgid "tournament"
+msgstr "turnaj"
+
+#: tournaments/models.py:19
+msgid "tournaments"
+msgstr "turnaje"
