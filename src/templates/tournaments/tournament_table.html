@@ -1,0 +1,20 @@
+<div class="golf_table">
+<table>
+  <thead>
+   <tr>
+    <th>Název</th>
+    <th>Datum a začátek startu</th>
+    <th>Vítěz</th>
+   </tr>
+    </thead>
+  <tbody>
+  {% for tournament in tournament_list %}
+    <tr>
+      <td><a href="{% url tournament_detail slug=tournament.slug %}">{{ tournament.name }}</a></td>
+      <td>{{ tournament.starts_on }}</td>
+      <td>{% if tournament.winner %}{{ tournament.winner }}{% endif %}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>

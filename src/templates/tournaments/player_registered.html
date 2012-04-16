@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load newstags %}
+{% load partnertags %}
+{% load tournament_tags %}
+{% block pagetitle %}{{ tournament.name }}{% endblock %}
+
+{% block top %}
+    <div id="top">
+        <span><a href="/" id="logo" class="golfer1">Golf Club Doksy</a></span>
+        <ul id="menu">
+          <li><a href="/">Návrat na hlavní stránku</a></li>
+        </ul>
+        <span id="marker"></span>
+    </div>
+{% endblock %}
+
+{% block base_content %}
+<div id="clean_content">
+  <h2>{{ tournament }}</h2>
+  <span class="date_label">Začátek: {{ tournament.starts_on|date }}</span><br/>
+  {% if tournament.winner %}<span>Vítěz: {{ tournament.winner }}, gratulujeme!</span><br/>{% else %}<br/>{% endif %}
+  <span>{% autoescape off %}{{ tournament.description }}{% endautoescape %}</span>
+  <a href="{% url tournament_register tournament.slug %}">Přihlásit</a>
+</div>
+{% endblock %}

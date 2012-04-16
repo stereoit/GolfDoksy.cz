@@ -1,0 +1,11 @@
+<div class="golf">
+{% if user.is_authenticated %}
+  {% if already_registered %}
+    <a href="{% url tournament_unregister tournament.slug %}">Odhlásit z turnaje</a>
+  {% else %}
+    <a href="{% url tournament_register tournament.slug %}">Přihlásit do turnaje</a>
+  {% endif %}
+{% else %}
+Pokud se chcete přihlásit do turnaje, nejprve se prosím <a href="{% url player-login %}">přihlašte</a>.
+{% endif %}
+</div>

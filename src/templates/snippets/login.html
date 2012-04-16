@@ -1,0 +1,7 @@
+<div class="golf">
+{% if user.is_authenticated %}
+<p>Můžete se <a href="{% url player-logout %}">odhlásit</a></p>
+{% else %}
+<p>Můžete se <a href="{% url player-registration %}">zaregistrovat</a> nebo <a href="{% url player-login %}">přihlásit</a>.</p>
+{% endif %}
+</div>

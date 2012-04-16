@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load newstags %}
+{% load partnertags %}
+{% load tournament_tags %}
+{% block pagetitle %}Seznam turnajů{% endblock %}
+
+{% block top %}
+    <div id="top">
+        <span><a href="/" id="logo" class="golfer1">Golf Club Doksy</a></span>
+        <ul id="menu">
+          <li><a href="/">Návrat na hlavní stránku</a></li>
+        </ul>
+        <span id="marker"></span>
+    </div>
+{% endblock %}
+
+{% block base_content %}
+<div id="clean_content">
+{{ user.username }}
+  <h2>Seznam turnajů</h2>
+  {% if have_tournaments %} {% render_tournaments 5 %}{% else %}Bohužel, v současné době nejsou plánovány žádné turnaje, zkuste
+  později.{% endif %}
+</div>
+{% endblock %}

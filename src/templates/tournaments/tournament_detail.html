@@ -1,0 +1,15 @@
+{% extends "clean.html" %}
+{% load cms_tags %}
+{% load newstags %}
+{% load partnertags %}
+{% load tournament_tags %}
+{% block pagetitle %}{{ tournament.name }}{% endblock %}
+
+{% block content %}
+{{ user.username }}
+  <h2>{{ tournament }}</h2>
+  <span class="date_label">Začátek: {{ tournament.starts_on|date }}</span><br/>
+  {% if tournament.winner %}<span>Vítěz: {{ tournament.winner }}, gratulujeme!</span><br/>{% else %}<br/>{% endif %}
+  <span>{% autoescape off %}{{ tournament.description }}{% endautoescape %}</span>
+  <div class="tournament_registration">{% handle_registration tournament %}</div>
+{% endblock %}
