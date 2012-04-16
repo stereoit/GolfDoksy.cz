@@ -165,17 +165,18 @@ div.article div.header p {
     padding: 0 10px;
 }
 
-div.article h2 { margin: 1em 0;}
+div.article h2 { margin: 0.5em 0;}
 div.article div.header p.back a { float:right; margin-top:1em;}
 div.article .content { padding-left: 1.5em;}
+div.golf { padding: 1em 0;}
 
 div.article#kontakt { margin-bottom: 0;}
-div#cenik_tag table { width: 90%; margin: 2em auto 2em 0; border-collapse: collapse; text-align:center; font-size: 12px;}
-div#cenik_tag table th { font-size: 14px; font-weight: bold; color: #646464; border-bottom: 2px solid #769B49; padding: 10px 8px;}
-div#cenik_tag table th:first-child { text-align:left;}
-div#cenik_tag table td { color: #646464; padding: 9px 8px 4px; border-bottom: 1px solid #DDDDDD;}
-div#cenik_tag table td:first-child { text-align:left;}
-div#cenik_tag table tbody tr:hover { background-color: #FCFCDC;}
+div.golf_table table { width: 90%; margin: 2em auto 2em 0; border-collapse: collapse; text-align:center; font-size: 12px;}
+div.golf_table table th { font-size: 14px; font-weight: bold; color: #646464; border-bottom: 2px solid #769B49; padding: 10px 8px;}
+div.golf_table table th:first-child { text-align:left;}
+div.golf_table table td { color: #646464; padding: 9px 8px 4px; border-bottom: 1px solid #DDDDDD;}
+div.golf_table table td:first-child { text-align:left;}
+div.golf_table table tbody tr:hover { background-color: #FCFCDC;}
 
 #opening_hours { margin: 1em 0;}
 
@@ -206,7 +207,7 @@ div#cenik_tag table tbody tr:hover { background-color: #FCFCDC;}
     color: #999999;
     display: inline-block;
     line-height: 46px;
-    padding: 0 15px;
+    padding: 0 0.6em;
     text-decoration: none;
 }
 #menu a:hover { color: rgb(248,248,248)}

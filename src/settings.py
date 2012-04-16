@@ -126,6 +126,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'cms.context_processors.media',
     'sekizai.context_processors.sekizai',
+    'tournaments.context_processors.have_tournaments',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -183,6 +184,8 @@ INSTALLED_APPS = (
     'news',
     'photologue',
     'partners',
+    'players',
+    'tournaments',
     'django_openid_auth',
 )
 
@@ -203,14 +206,18 @@ LOG_BASE_PATH = os.path.join(os.path.split(PROJECT_ROOT)[0], 'logs')
 
 OPENID_CREATE_USERS = True
 OPENID_UPDATE_DETAILS_FROM_SREG = False
-LOGIN_URL = '/openid/login/'
-LOGIN_REDIRECT_URL = '/admin/'
-OPENID_SSO_SERVER_URL = 'https://www.google.com/accounts/o8/site-xrds?hd=golfdoksy.cz'
+LOGIN_URL = '/hraci/login/'
+LOGIN_REDIRECT_URL = '/'
+#LOGIN_URL = '/openid/login/'
+#LOGIN_REDIRECT_URL = '/admin/'
+#OPENID_SSO_SERVER_URL = 'https://www.google.com/accounts/o8/site-xrds?hd=golfdoksy.cz'
 
 AUTHENTICATION_BACKENDS = (
-    'django_openid_auth.auth.OpenIDBackend',
     'django.contrib.auth.backends.ModelBackend',
+    'django_openid_auth.auth.OpenIDBackend',
 )
+
+AUTH_PROFILE_MODULE = 'players.PlayerProfile'
 
 
 

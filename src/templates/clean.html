@@ -2,10 +2,11 @@
 {% load cms_tags %}
 {% load newstags %}
 {% load partnertags %}
+{% load tournament_tags %}
 
 {% block top %}
     <div id="top">
-        <span><a href="/" id="logo" class="golfer1">GolfDoksy.cz</a></span>
+        <span><a href="/" id="logo" class="golfer1">Golf Club Doksy</a></span>
         <ul id="menu">
           <li><a href="/">Návrat na hlavní stránku</a></li>
         </ul>
@@ -13,10 +14,11 @@
     </div>
 {% endblock %}
 
+
 {% block base_content %}
+    {% block messages %}{% include "fragments/messages.html" %}{% endblock %}
       <div id="clean_content">
       {% placeholder obsah %}
-      {% block content %}
-      {% endblock %}
+      {% block content %}{% endblock %}
       </div>
 {% endblock %}

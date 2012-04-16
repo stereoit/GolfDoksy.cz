@@ -1,7 +1,7 @@
-{% load cms_tags sekizai_tags %}{% load cms_tags %}{% load cache menu_tags %}{% load menu_tags %}{% load newstags %}<!DOCTYPE html>
+{% load cms_tags sekizai_tags %}{% load cms_tags %}{% load cache menu_tags %}{% load menu_tags %}{% load newstags %}{% load tournament_tags %}<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="{{ request.LANGUAGE_CODE }}" xml:lang="{{ request.LANGUAGE_CODE }}">
 <head>
-    <title>{% page_attribute page_title %} - GolfDoksy.cz - {% now "Y" %}</title>
+    <title>{% page_attribute page_title %}{% block pagetitle %}{% endblock %} - Golf Club Doksy {% now "Y" %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-language" content="{{ request.LANGUAGE_CODE }}" />
     <meta name="description" content="{% page_attribute meta_description %}" />
@@ -47,7 +47,8 @@
         <ul id="menu">
           <li><a href="#aktuality">Aktuality</a></li>
           <li><a href="#hriste">Hřiště</a></li>
-          <li><a href="#klub">Klub</a></li>
+          <li><a href="#klub">Klub</a></li>{% if have_tournaments %}
+          <li><a href="#turnaje">Turnaje</a></li>{% endif %}
           <li><a href="#cenik">Ceník</a></li>
           <li><a href="#galerie">Fotogalerie</a></li>
           <li><a href="#partneri">Partneři</a></li>

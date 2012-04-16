@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 {% load newstags %}
+{% load tournament_tags %}
 {% load partnertags %}
 
 {% block base_content %}
@@ -14,7 +15,7 @@
         <div class="content">
           <div id="news_tag">{% news_tag 3 %}</div>
           <div class="clear"></div>
-          <a href="aktuality/" >všechny novinky</a>
+          <a href="aktuality/">všechny novinky</a>
         </div>
       </div class="article">
       <div class="article" id="hriste">
@@ -37,6 +38,21 @@
           {% placeholder klub %}
         </div>
       </div class="article">
+      {% if have_tournaments %}
+      <div class="article" id="turnaje">
+        <div class="header">
+        <h1>Turnaje</h1>
+        <p>{% placeholder turnaje_claim %}</p>
+        <p class="back"><a href="#home-news">zpět</a></p>
+        </div class="header">
+        <div class="content">
+          {% placeholder turnaje %}
+          {% render_tournaments 3 %}
+          <div class="clear"></div>
+          <a href="{% url tournaments %}">všechny turnaje</a>
+        </div>
+      </div class="article">
+      {% endif %}
       <div class="article" id="cenik">
         <div class="header">
         <h1>Ceník</h1>
@@ -44,7 +60,7 @@
         <p class="back"><a href="#home-news">zpět</a></p>
         </div class="header">
         <div class="content">
-          <div id="cenik_tag">{% placeholder cenik %}</div>
+          <div id="cenik_tag" class="golf_table">{% placeholder cenik %}</div>
         </div>
       </div class="article">
       <div class="article" id="galerie">
