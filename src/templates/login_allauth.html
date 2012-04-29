@@ -1,0 +1,51 @@
+{% extends "clean.html" %}
+{% load cms_tags %}
+{% load newstags %}
+{% load sekizai_tags %}
+
+{% block content %}
+<h1>Přihlášení</h1>
+
+{% if not user.is_authenticated %}
+
+<p>Přihlašte se pomocí jedné z následujících možností.</p>
+
+<div class="socialaccount_ballot">
+
+<ul class="socialaccount_providers">
+{% include "fragments/players/provider_list.html" %}
+</ul>
+
+<div class="login-or">nebo</div>
+
+</div>
+
+{% endif %}
+
+    <form class="login" method="POST" action="{% url account_login %}">
+        {% csrf_token %}
+          {{ form|bootstrap }}
+            {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Přihlášení</button>
+                <a class="btn" href="{% url account_reset_password %}">Zapomenuté heslo?</a>
+
+            </div>
+    </form>
+
+{% if user.is_authenticated %}
+    <p>Už jste přihlášen</p>
+{% endif %}
+
+{% endblock %}
+
+{% block javascript %}
+  <script type="text/javascript" src="{{ STATIC_URL }}js/browserid.js"></script>
+{% endblock %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/colorbox.css" media="projection, screen" />
+{% endblock %}
+

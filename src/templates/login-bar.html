@@ -1,0 +1,11 @@
+{% extends "clean.html" %}
+{% load cms_tags %}
+{% load newstags %}
+{% load partnertags %}
+{% load tournament_tags %}
+{% block pagetitle %}{{ tournament.name }}{% endblock %}
+
+{% block content %}
+<h2>Login bar</h2>
+{% include "fragments/loginbar.html" %}
+{% endblock %}

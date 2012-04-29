@@ -1,81 +1,22 @@
-{% load cms_tags sekizai_tags %}{% load cms_tags %}{% load cache menu_tags %}{% load menu_tags %}<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="{{ request.LANGUAGE_CODE }}" xml:lang="{{ request.LANGUAGE_CODE }}">
-<head>
-    <title>{% page_attribute page_title %}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Content-language" content="{{ request.LANGUAGE_CODE }}" />
-    <meta name="description" content="{% page_attribute meta_description %}" />
-    <meta name="keywords" content="{% page_attribute meta_keywords %}" />
-    <meta name="copyright" content="stereoIT s.r.o." />
-    <meta name="author" content="CodeScale s.r.o., stereoIT s.r.o." />
-    <meta name="google-site-verification" content="lyBJpncDwcKsn7Yvn9AbB-UzZKKKclDlTp3_JVHxDwQ" />
-    {% block robots %}
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow, snippet, archive" />
-    {% endblock %}
-    <link href='http://fonts.googleapis.com/css?family=Cabin+Condensed|Spinnaker' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" media="projection, screen" />
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/golfdoksy.css" media="projection, screen" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    {% render_block "css" %}
-    {% comment %} 
-    <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-1.6.1.js"></script>
-       {% plugins_media %}{% endcomment %}
-</head>
+{% extends "clean.html" %}
+{% load cms_tags %}
+{% load newstags %}
+{% load sekizai_tags %}
 
-<body>
-    <div id="home"></div>
-    <header id="top">
-        <span><a href="#home" id="logo" class="golfer1">GolfDoksy.cz</a></span>
-        <ul id="menu">
-          <li><a href="#aktuality">Aktuality</a></li>
-          <li><a href="#pricelist">Ceník</a></li>
-          <li><a href="#hriste">Hřiště</a></li>
-          <li><a href="#klub">O Klubu</a></li>
-        </ul>
-        <span id="marker"></span>
-    </header>
+{% block content %}
     <div id="announcementclear">
       <div id="servererror">
       <h1 class="statuscodes">Je nám líto, ale požadovaná stránka nebyla nenalezena.</h1>
       </div>
     </div>
-    <section id="wrapper">
-        <div id="footer">
-          <div id="sitemap">
-            <div class="column-1">
-                <h4>{% placeholder company_address_label %}Adresa</h4>
-                <p>
-                    GolfDoksy o.s.<br />
-                    Sport Areál Termit<br />
-                    472 01 Doksy<br />
-                    Česká Republika<br /><br />
-                </p>
-            </div><!-- div.column-1 -->
-            <div class="column-2">
-                <h4>{% placeholder how_to_contact_us_label %}Kontakt</h4>
-                <p>
-                +420 773 885 311<br />
-                +421 948 023 011<br />
-                <a href="mailto:info@golfsoksy.cz">info@golfdoksy.cz</a><br />
-                <a href="/">{% placeholder contact_form_label %}</a><br />
-                <a href="http://www.golfdoksy.cz/">www.golfdoksy.cz</a>
-                </p>
-            </div><!-- div.column-2 -->
-            <div class="column-3">
-                <h4>Sociální sítě</h4>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Google+</a></li>
-                </ul>
-            </div><!-- div.column-3 -->
-            <div id="copyright">
-                <p> Copyright &copy; 2010 - {% now "Y" %} GolfDoksy o.s. </p>
-            </div><!-- div.column-5 -->
-          </div> <!-- div#sitemap -->
-        </div><!-- div#footer -->
-    </section>
-      {% render_block "js" %}
-</body>
-</html>
+{% endblock %}
+
+{% block javascript %}
+  <script src="{{ STATIC_URL }}js/jquery.colorbox-min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/gallery.js"></script>
+{% endblock %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/colorbox.css" media="projection, screen" />
+{% endblock %}
+

@@ -1,0 +1,27 @@
+{% extends "clean.html" %}
+{% load cms_tags %}
+{% load newstags %}
+{% load sekizai_tags %}
+
+{% block content %}
+<h1>Přihlášení</h1>
+
+{% if user.is_authenticated %}
+Jste prihlášen jako {{ user.username }}, <a href="{% url player-logout %}">odhlásit</a>.
+{% else %}
+
+<p>Přihlašte se pomocí jedné z následujících možností.</p>
+
+  <ul>
+   <li><a href="/login/google-oauth2/" title="Google">Google</a></li>
+   <li><a href="/login/facebook/" title="Facebook">Facebook</a></li>
+   <li><a href="/login/twitter/" title="Twitter">Twitter</a></li>
+   <li><a href="#" id="browserid" title="Přihlášení s BrowserID">browserID</a></li>
+{% endif %}
+
+{% endblock %}
+
+{% block javascript %}
+  <script type="text/javascript" src="{{ STATIC_URL }}js/browserid.js"></script>
+{% endblock %}
+

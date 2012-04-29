@@ -1,0 +1,24 @@
+{% extends "clean.html" %}
+{% load cms_tags %}
+{% load newstags %}
+{% load sekizai_tags %}
+
+{% block content %}
+<div id="login">
+    <a href="#" id="browserid" title="Přihlášení s BrowserID"><img src="{{ STATIC_URL}}img/sign_in_green.png" alt="Přihlášení"></a> s BrowserID.
+</div>
+{% comment %}
+<form method="post" action="{% url socialauth_complete "browserid" %}">
+    <input type="hidden" name="assertion" value="" /> <a rel="nofollow" id="browserid" href="#">BrowserID</a>
+</form>
+{% endcomment %}
+{% endblock %}
+
+{% block javascript %}
+  <script type="text/javascript" src="{{ STATIC_URL }}js/browserid.js"></script>
+{% endblock %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/colorbox.css" media="projection, screen" />
+{% endblock %}
+

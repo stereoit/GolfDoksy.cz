@@ -1,0 +1,19 @@
+{% extends "clean.html" %}
+{% load cms_tags %}
+{% load newstags %}
+{% load sekizai_tags %}
+
+{% block content %}
+ Přihlášení bylo úspěšné, pokračujte na <a href="/">hlavní stránku</a>.
+<div id="login">
+</div>
+{% endblock %}
+
+{% block javascript %}
+  <script type="text/javascript" src="{{ STATIC_URL }}js/browserid.js"></script>
+{% endblock %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/colorbox.css" media="projection, screen" />
+{% endblock %}
+
