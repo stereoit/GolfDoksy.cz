@@ -15,6 +15,10 @@ urlpatterns = patterns('',
     url(r'^galerie/$', 'news.views.gallery'),
     url(r'^galerie/(?P<slug>[a-zA-Z0-9_.-]*)/$', 'news.views.gallery'),
     url(r'^clean/$', direct_to_template,{'template':'clean.html'}, name="clean"),
+    url(r'^xxx/$', direct_to_template,{'template':'login-bar.html'}, name="browserid"),
+    url(r'^browserid/$', direct_to_template,{'template':'browserid.html'}, name="browserid"),
+    url(r'^logged-in/$', direct_to_template,{'template':'logged_in.html'}, name="logged_in"),
+    url(r'^', include('social_auth.urls')),
     url(r'^', include('cms.urls')),
 )
 
@@ -24,5 +28,5 @@ if settings.DEBUG:
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     url(r'', include('django.contrib.staticfiles.urls')),
-    url(r'^openid/', include('django_openid_auth.urls')),
+    #url(r'^openid/', include('django_openid_auth.urls')),
 ) + urlpatterns + staticfiles_urlpatterns()

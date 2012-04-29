@@ -127,6 +127,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'cms.context_processors.media',
     'sekizai.context_processors.sekizai',
     'tournaments.context_processors.have_tournaments',
+    'social_auth.context_processors.social_auth_by_type_backends',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -186,7 +187,8 @@ INSTALLED_APPS = (
     'partners',
     'players',
     'tournaments',
-    'django_openid_auth',
+#    'django_openid_auth',
+    'social_auth',
 )
 
 CMS_TEMPLATES = (
@@ -204,22 +206,73 @@ THUMBNAIL_PROCESSORS = (
 
 LOG_BASE_PATH = os.path.join(os.path.split(PROJECT_ROOT)[0], 'logs')
 
-OPENID_CREATE_USERS = True
-OPENID_UPDATE_DETAILS_FROM_SREG = False
-LOGIN_URL = '/hraci/login/'
-LOGIN_REDIRECT_URL = '/'
+#LOGIN_URL = '/hraci/login/'
+#LOGIN_REDIRECT_URL = '/'
 #LOGIN_URL = '/openid/login/'
 #LOGIN_REDIRECT_URL = '/admin/'
+#OPENID_CREATE_USERS = True
+#OPENID_UPDATE_DETAILS_FROM_SREG = False
 #OPENID_SSO_SERVER_URL = 'https://www.google.com/accounts/o8/site-xrds?hd=golfdoksy.cz'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
-    'django_openid_auth.auth.OpenIDBackend',
+#    'django_openid_auth.auth.OpenIDBackend',
+    'social_auth.backends.twitter.TwitterBackend',
+    'social_auth.backends.facebook.FacebookBackend',
+    #'social_auth.backends.google.GoogleOAuthBackend',
+    'social_auth.backends.google.GoogleOAuth2Backend',
+    #'social_auth.backends.google.GoogleBackend',
+    #'social_auth.backends.yahoo.YahooBackend',
+    'social_auth.backends.browserid.BrowserIDBackend',
+    #'social_auth.backends.contrib.foursquare.FoursquareBackend',
+    'social_auth.backends.OpenIDBackend',
 )
 
 AUTH_PROFILE_MODULE = 'players.PlayerProfile'
 
+#OAuth keys
+TWITTER_CONSUMER_KEY         = ''
+TWITTER_CONSUMER_SECRET      = ''
+FACEBOOK_APP_ID              = ''
+FACEBOOK_API_SECRET          = ''
+GOOGLE_CONSUMER_KEY          = ''
+GOOGLE_CONSUMER_SECRET       = ''
+GOOGLE_OAUTH2_CLIENT_ID      = ''
+GOOGLE_OAUTH2_CLIENT_SECRET  = ''
 
+LOGIN_URL          = '/login-form/'
+LOGIN_REDIRECT_URL = '/logged-in/'
+LOGIN_ERROR_URL    = '/login-error/'
+
+
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/'
+SOCIAL_AUTH_NEW_ASSOCIATION_REDIRECT_URL = '/account-created/'
+
+SOCIAL_AUTH_COMPLETE_URL_NAME  = 'socialauth_complete'
+SOCIAL_AUTH_ASSOCIATE_URL_NAME = 'socialauth_associate_complete'
+
+SOCIAL_AUTH_DEFAULT_USERNAME = 'golfdoksy_user'
+SOCIAL_AUTH_UUID_LENGTH = 16
+
+SOCIAL_AUTH_EXPIRATION = 'expires'
+
+SOCIAL_AUTH_RAISE_EXCEPTIONS = DEBUG
+
+FACEBOOK_EXTENDED_PERMISSIONS = ['email']
+
+GOOGLE_DISPLAY_NAME     = 'Golf Club Doksy'
+GOOGLE_CONSUMER_KEY     = 'www.golfdoksy.cz '
+GOOGLE_CONSUMER_SECRET  = 'yAwme-rbIWFHZ3SVKKKD305k'
+
+GOOGLE_OAUTH2_CLIENT_ID = '842489790353.apps.googleusercontent.com'
+GOOGLE_OAUTH2_CLIENT_SECRET = 'A5jQM__6kzg8Mc2dUQBYxjWq'
+
+TWITTER_CONSUMER_KEY    = 'm1h5iw0z5P7iIqHLxBa3cA'
+TWITTER_CONSUMER_SECRET = '77Hbl5xiTUPuamiPiFZZfxsxWmVKpbD34jqxGGaQAHo'
+
+#tests
+TEST_GOOGLE_USER = 'robert.smol@golfdoksy.cz'
+TEST_GOOGLE_PASSWORD = 'ef0iwenf13jasdfb'
 
 LOGGING = {
     'version': 1,
