@@ -9,10 +9,14 @@ django-filer==0.8.5
 django-mptt==0.5.2
 django-openid-auth==0.4
 django-photologue==2.3
+django-polymorphic==0.2
 django-sekizai==0.5
+django-social-auth==0.6.9
 easy-thumbnails==1.0-alpha-20
 html5lib==0.90
--e git://github.com/adieu/python-openid.git@03773fb96dff352bbda12538726dc5c46fe0316c#egg=python_openid-dev
+httplib2==0.7.4
+oauth2==1.5.211
+-e git://github.com/adieu/python-openid.git@03773fb96dff352bbda12538726dc5c46fe0316c#egg=python_openid-2.2.5-py2.7-google
 sorl-thumbnail==11.12
 textile==2.1.5
 wsgiref==0.1.2
