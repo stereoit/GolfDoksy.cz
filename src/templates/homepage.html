@@ -97,8 +97,22 @@
         <p class="back"><a href="#home-news" class="scroll" >zpět</a></p>
         </div class="header">
         <div>
-          <div id="opening_hours">{% placeholder oteviraci_doba %}</div>
-          <div id="bank_account">{% placeholder bank_account %}</div>
+        <div style="float:left" class="two-column">
+          <div class="one-column">
+            <div id="opening_hours">{% placeholder oteviraci_doba %}</div>
+            <div id="bank_account">{% placeholder bank_account %}</div>
+          </div>
+        </div>
+        <div style="float:left" class="two-column">
+            <div class="one-column">
+            <h2>Kalendář</h2>
+            <p>Již nezmeškejte žádný turnaj, valnou hormadu či možnost si zatrénovat pod prefesionálním vedením.</p>
+            <p>
+            <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=150&amp;wkst=2&amp;hl=cs&amp;bgcolor=%23FFFFFF&amp;src=golfdoksy.cz_cbqg9lsjjsa6aapi60tlrtfc4s%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=Europe%2FBerlin" style=" border-width:0 " width="400" height="150" frameborder="0" scrolling="no"></iframe>
+            </p>
+            </div>
+        </div>
+        <div style="clear: both;"></div> 
         <div style="float:left;" class="two-column">
           <h2>Napište nám</h2>
           {% placeholder kontakt_formular %}
@@ -121,8 +135,8 @@
             <div class="column column-2">
                 <h4>Kontakty</h4>
                 <p>
-                +420 773 885 311<br />
-                +421 948 023 011<br />
+                <b>+420 776 488 763</b><br />
+                <br />
                 <a href="mailto:info@golfdoksy.cz">info@golfdoksy.cz</a><br />
                 <a href="http://www.golfdoksy.cz/">www.golfdoksy.cz</a>
                 </p>
