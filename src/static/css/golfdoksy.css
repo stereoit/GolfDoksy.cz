@@ -138,6 +138,7 @@ h1.statuscodes { text-align: center; font-size: 3em; color:#303030 }
      top: 30px;
      width: 450px;
 }
+
 #intro {
     /* background: #FCFCDC; */
     width: 300px;
@@ -232,6 +233,7 @@ div.partner { margin: 1em 0; }
 div.partner .name { font-weight: bold; font-size: 15px }
 div.partner .logo { width: 250px; height: 100px; vertical-align: middle; text-align: center;}
 div.partner .description { font-style: italic; vertical-align: middle }
+div.partner .description ul { padding-left:1em; list-style: disc inside;}
 
 div#gallery_tag { margin-bottom: 2em; }
 

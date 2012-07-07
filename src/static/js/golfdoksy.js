@@ -33,4 +33,19 @@ $('document').ready(function() {
         },1000).removeClass("scrolling");
         return false;
     }); 
+
+    $('a.moreinfo').click(function(event){
+        var lessDiv = $(this).parent('div.lessinfo');
+        var moreDiv = lessDiv.next();
+        lessDiv.slideUp();
+        moreDiv.slideDown("slow");
+        event.preventDefault();
+    });
+    $('a.lessinfo').click(function(event){
+        var moreDiv = $(this).parent('div.moreinfo');
+        var lessDiv = moreDiv.prev();
+        moreDiv.slideUp();
+        lessDiv.slideDown("slow");
+        event.preventDefault();
+    });
 });

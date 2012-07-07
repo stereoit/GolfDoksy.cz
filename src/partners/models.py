@@ -7,7 +7,7 @@ import textile
 
 class Partner(models.Model):
     name = models.CharField(_(u'name'), null=False, max_length=255)
-    slug = models.CharField(_(u'slug'), max_length=255, editable=False, null=True)
+    slug = models.CharField(_(u'slug'), max_length=255, editable=True, null=False)
     logo = models.ImageField(_(u'logo'), upload_to='partners')
     description = models.TextField(_(u'description'), null=False, blank=False,help_text=u'Text lze formárovat pomocí Textile.')
     description_html = models.TextField(_(u'description'), editable=False, null=True)

@@ -11,9 +11,26 @@
 {% endfor %}
 {% endcomment %}
 {% for i in partners %}
-<tr><td colspan="2" class="name">{{ i.name }}</td></tr>
+<tr><td colspan="2" class="name">{% if i.homepage %}<a href="{{ i.homepage }}">{{ i.name }}</a>{% else %}{{ i.name }}{% endif %}</td></tr>
 <tr>
+  {% if i.homepage %}
+    <td class="logo"><a href="{{ i.homepage }}"><img src="{{ i.logo.url }}" alt="" /></a></td>
+  {% else %}
     <td class="logo"><img src="{{ i.logo.url }}" alt="" /></td>
-    <td class="description">{{ i.description_html|safe }}</td>
+  {% endif %}
+    <td class="description">
+      <div class="lessinfo">
+        {{ i.description_html|safe }}
+        {% if i.promotion %}
+          <br/><a class="moreinfo" href="">Více informací</a>
+        {% endif %}
+      </div>
+      {% if i.promotion %}
+        <div class="moreinfo" style="display:none"><p>
+          {{ i.promotion|safe }}</p>
+          <br/><a class="lessinfo" href="">Méně informací</a>
+        </div>
+      {% endif %}
+    </td>
 </tr>
 {% endfor %}

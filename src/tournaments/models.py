@@ -21,7 +21,7 @@ class Tournament(models.Model):
         return datetime.now() > (self.starts_on +timedelta(day=1))
 
     class Meta:
-        ordering = ['-starts_on']
+        ordering = ['starts_on']
         verbose_name = _('tournament')
         verbose_name_plural = _('tournaments')
 

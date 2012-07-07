@@ -3,6 +3,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic.simple import direct_to_template
 from django.conf import settings
 from django.contrib import admin
+from partners.views import PartnerDetailView
 
 admin.autodiscover()
 
@@ -18,6 +19,7 @@ urlpatterns = patterns('',
     url(r'^xxx/$', direct_to_template,{'template':'login-bar.html'}, name="browserid"),
     url(r'^browserid/$', direct_to_template,{'template':'browserid.html'}, name="browserid"),
     url(r'^logged-in/$', direct_to_template,{'template':'logged_in.html'}, name="logged_in"),
+#    url(r'^partner/(?P<slug>[-\w]+)/$', PartnerDetailView.as_view(), name="partner_detail"),
     url(r'^', include('social_auth.urls')),
     url(r'^', include('cms.urls')),
 )
